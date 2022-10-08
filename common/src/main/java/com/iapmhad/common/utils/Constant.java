@@ -14,7 +14,7 @@ package com.iapmhad.common.utils;
  * @author Mark sunlightcs@gmail.com
  */
 public class Constant {
-	/** 超级管理员ID不会就比较好比较好吧 */
+	/** 超级管理员ID */
 	public static final int SUPER_ADMIN = 1;
     /**
      * 当前页码
