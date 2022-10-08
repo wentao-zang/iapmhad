@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.ame_hdym.dao.SpinfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.ame_hdym.entity.SpinfoEntity" id="spinfoMap">
+        <result property="id" column="ID"/>
+        <result property="rotvel" column="RotVel"/>
+        <result property="vel" column="Vel"/>
+        <result property="pos" column="Pos"/>
+        <result property="temp" column="Temp"/>
+        <result property="spload" column="SpLoad"/>
+        <result property="current" column="Current"/>
+        <result property="torque" column="Torque"/>
+        <result property="power" column="Power"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+
+
+</mapper>

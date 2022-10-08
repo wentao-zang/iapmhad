@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.ame_hdym.dao.SetstationDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.ame_hdym.entity.SetstationEntity" id="setstationMap">
+        <result property="fixtureid" column="FixtureID"/>
+        <result property="pointname" column="PointName"/>
+        <result property="theoryx" column="TheoryX"/>
+        <result property="theoryy" column="TheoryY"/>
+        <result property="theoryz" column="TheoryZ"/>
+        <result property="actualx" column="ActualX"/>
+        <result property="actualy" column="ActualY"/>
+        <result property="actualz" column="ActualZ"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+
+
+</mapper>

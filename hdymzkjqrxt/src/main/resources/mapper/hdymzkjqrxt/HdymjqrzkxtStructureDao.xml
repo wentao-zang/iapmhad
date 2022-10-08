@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.HdymjqrzkxtStructureDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.HdymjqrzkxtStructureEntity" id="hdymjqrzkxtStructureMap">
+        <result property="id" column="ID"/>
+        <result property="deviceId" column="DEVICE_ID"/>
+        <result property="parentId" column="PARENT_ID"/>
+        <result property="deviceCode" column="DEVICE_CODE"/>
+        <result property="deviceName" column="DEVICE_NAME"/>
+        <result property="updateTime" column="UPDATE_TIME"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.HdymjqrzkxtStructureEntity">
+        SELECT * FROM hdymjqrzkxt_structure WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.HdymjqrzkxtStructureEntity">
+        SELECT * FROM hdymjqrzkxt_structure  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

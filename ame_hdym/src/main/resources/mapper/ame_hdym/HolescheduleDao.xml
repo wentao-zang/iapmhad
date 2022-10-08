@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.ame_hdym.dao.HolescheduleDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.ame_hdym.entity.HolescheduleEntity" id="holescheduleMap">
+        <result property="id" column="ID"/>
+        <result property="fixtureid" column="fixtureID"/>
+        <result property="taskid" column="TaskId"/>
+        <result property="holeokcounts" column="HoleOKCounts"/>
+        <result property="holeSchedule" column="Hole_Schedule"/>
+        <result property="holecounts" column="HoleCounts"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+    <select id="getLast" resultType="com.iapmhad.ame_hdym.entity.HolescheduleEntity">
+        SELECT * FROM holeschedule ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

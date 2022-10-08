@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.ame_hdym.dao.HoleNormalmodifyDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.ame_hdym.entity.HoleNormalmodifyEntity" id="holeNormalmodifyMap">
+        <result property="fixtureid" column="fixtureID"/>
+        <result property="pointname" column="pointName"/>
+        <result property="theoryX" column="theory_x"/>
+        <result property="theoryY" column="theory_y"/>
+        <result property="theoryZ" column="theory_z"/>
+        <result property="theoryA" column="theory_a"/>
+        <result property="theoryB" column="theory_b"/>
+        <result property="theoryC" column="theory_c"/>
+        <result property="actualX" column="actual_x"/>
+        <result property="actualY" column="actual_y"/>
+        <result property="actualZ" column="actual_z"/>
+        <result property="actualA" column="actual_a"/>
+        <result property="actualB" column="actual_b"/>
+        <result property="actualC" column="actual_c"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+
+
+</mapper>

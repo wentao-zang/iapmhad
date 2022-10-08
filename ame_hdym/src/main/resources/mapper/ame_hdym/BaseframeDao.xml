@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.ame_hdym.dao.BaseframeDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.ame_hdym.entity.BaseframeEntity" id="baseframeMap">
+        <result property="id" column="ID"/>
+        <result property="stationcode" column="StationCode"/>
+        <result property="x" column="X"/>
+        <result property="y" column="Y"/>
+        <result property="z" column="Z"/>
+        <result property="a" column="A"/>
+        <result property="b" column="B"/>
+        <result property="c" column="C"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+
+
+</mapper>

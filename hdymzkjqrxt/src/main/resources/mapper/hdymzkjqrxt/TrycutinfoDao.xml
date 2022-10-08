@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.TrycutinfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.TrycutinfoEntity" id="trycutinfoMap">
+        <result property="id" column="ID"/>
+        <result property="code" column="Code"/>
+        <result property="dia" column="Dia"/>
+        <result property="oriholedis" column="OriHoleDis"/>
+        <result property="holegap" column="HoleGap"/>
+        <result property="holerow" column="HoleRow"/>
+        <result property="holecol" column="HoleCol"/>
+        <result property="toolcode" column="ToolCode"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.TrycutinfoEntity">
+        SELECT * FROM trycutinfo WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.TrycutinfoEntity">
+        SELECT * FROM trycutinfo  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

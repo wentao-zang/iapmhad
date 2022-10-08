@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.processParametersJqrzk.dao.ColdExtrusionHoleProcessDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.processParametersJqrzk.entity.ColdExtrusionHoleProcessEntity" id="coldExtrusionHoleProcessMap">
+        <result property="id" column="id"/>
+        <result property="aperture" column="APERTURE"/>
+        <result property="toolId" column="TOOL_ID"/>
+        <result property="holeDepth" column="HOLE_DEPTH"/>
+        <result property="dimpleDepth" column="DIMPLE_DEPTH"/>
+        <result property="holeDepthMax" column="HOLE_DEPTH_MAX"/>
+        <result property="holeDepthMin" column="HOLE_DEPTH_MIN"/>
+        <result property="shaftRotaion" column="SHAFT_ROTAION"/>
+        <result property="shaftFeedRate" column="SHAFT_FEED_RATE"/>
+        <result property="dimpleRotation" column="DIMPLE_ROTATION"/>
+        <result property="dimpleFeedRate" column="DIMPLE_FEED_RATE"/>
+        <result property="presserForce" column="PRESSER_FORCE"/>
+        <result property="rapidFeedRate" column="RAPID_FEED_RATE"/>
+        <result property="startPos" column="START_POS"/>
+        <result property="firstDepth" column="FIRST_DEPTH"/>
+    </resultMap>
+
+
+</mapper>

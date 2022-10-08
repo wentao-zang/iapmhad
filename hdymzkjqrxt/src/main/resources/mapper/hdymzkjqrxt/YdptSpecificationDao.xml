@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.YdptSpecificationDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.YdptSpecificationEntity" id="ydptSpecificationMap">
+        <result property="id" column="ID"/>
+        <result property="deviceId" column="DEVICE_ID"/>
+        <result property="deviceCode" column="DEVICE_CODE"/>
+        <result property="deviceName" column="DEVICE_NAME"/>
+        <result property="mass" column="MASS"/>
+        <result property="platformSizeX" column="PLATFORM_SIZE_X"/>
+        <result property="platformSizeY" column="PLATFORM_SIZE_Y"/>
+        <result property="platformSizeZ" column="PLATFORM_SIZE_Z"/>
+        <result property="railCode" column="RAIL_CODE"/>
+        <result property="railRange" column="RAIL_RANGE"/>
+        <result property="railSpeed" column="RAIL_SPEED"/>
+        <result property="posErr" column="POS_ERR"/>
+        <result property="reposErr" column="REPOS_ERR"/>
+        <result property="moterCode" column="MOTER_CODE"/>
+        <result property="reductorCode" column="REDUCTOR_CODE"/>
+        <result property="rackCode" column="RACK_CODE"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.YdptSpecificationEntity">
+        SELECT * FROM ydpt_specification WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.YdptSpecificationEntity">
+        SELECT * FROM ydpt_specification  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

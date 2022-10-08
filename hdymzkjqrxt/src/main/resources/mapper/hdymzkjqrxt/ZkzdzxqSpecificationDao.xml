@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.ZkzdzxqSpecificationDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.ZkzdzxqSpecificationEntity" id="zkzdzxqSpecificationMap">
+        <result property="id" column="ID"/>
+        <result property="deviceId" column="DEVICE_ID"/>
+        <result property="deviceCode" column="DEVICE_CODE"/>
+        <result property="deviceName" column="DEVICE_NAME"/>
+        <result property="mass" column="MASS"/>
+        <result property="apertureU" column="APERTURE_U"/>
+        <result property="apertureL" column="APERTURE_L"/>
+        <result property="feedRange" column="FEED_RANGE"/>
+        <result property="pitDepthErr" column="PIT_DEPTH_ERR"/>
+        <result property="holePosErr" column="HOLE_POS_ERR"/>
+        <result property="nErr" column="N_ERR"/>
+        <result property="shaftRotation" column="SHAFT_ROTATION"/>
+        <result property="shaftCode" column="SHAFT_CODE"/>
+        <result property="bodyDiameter" column="BODY_DIAMETER"/>
+        <result property="bodyLength" column="BODY_LENGTH"/>
+        <result property="lubricationType" column="LUBRICATION_TYPE"/>
+        <result property="refrigerationType" column="REFRIGERATION_TYPE"/>
+        <result property="shaftPower" column="SHAFT_POWER"/>
+        <result property="shaftTorque" column="SHAFT_TORQUE"/>
+        <result property="shaftVoltage" column="SHAFT_VOLTAGE"/>
+        <result property="shaftElectricity" column="SHAFT_ELECTRICITY"/>
+        <result property="handleCode" column="HANDLE_CODE"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.ZkzdzxqSpecificationEntity">
+        SELECT * FROM zkzdzxq_specification WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.ZkzdzxqSpecificationEntity">
+        SELECT * FROM zkzdzxq_specification  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

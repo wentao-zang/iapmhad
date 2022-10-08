@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.CpProductDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.CpProductEntity" id="cpProductMap">
+        <result property="id" column="ID"/>
+        <result property="productId" column="PRODUCT_ID"/>
+        <result property="productName" column="PRODUCT_NAME"/>
+        <result property="productSizeX" column="PRODUCT_SIZE_X"/>
+        <result property="productSizeY" column="PRODUCT_SIZE_Y"/>
+        <result property="productSizeZ" column="PRODUCT_SIZE_Z"/>
+        <result property="fixtureSizeX" column="FIXTURE_SIZE_X"/>
+        <result property="fixtureSizeY" column="FIXTURE_SIZE_Y"/>
+        <result property="fixtureSizeZ" column="FIXTURE_SIZE_Z"/>
+        <result property="processType" column="PROCESS_TYPE"/>
+        <result property="processNum" column="PROCESS_NUM"/>
+        <result property="processRangeU" column="PROCESS_RANGE_U"/>
+        <result property="processRangeL" column="PROCESS_RANGE_L"/>
+        <result property="posErrU" column="POS_ERR_U"/>
+        <result property="posErrL" column="POS_ERR_L"/>
+        <result property="material" column="MATERIAL"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.CpProductEntity">
+        SELECT * FROM cp_product WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.CpProductEntity">
+        SELECT * FROM cp_product  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

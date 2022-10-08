@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.ame_hdym.dao.AxisinfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.ame_hdym.entity.AxisinfoEntity" id="axisinfoMap">
+        <result property="id" column="ID"/>
+        <result property="vel1" column="VEL1"/>
+        <result property="vel2" column="VEL2"/>
+        <result property="vel3" column="VEL3"/>
+        <result property="vel4" column="VEL4"/>
+        <result property="vel5" column="VEL5"/>
+        <result property="vel6" column="VEL6"/>
+        <result property="velx1" column="VELX1"/>
+        <result property="current1" column="CURRENT1"/>
+        <result property="current2" column="CURRENT2"/>
+        <result property="current3" column="CURRENT3"/>
+        <result property="current4" column="CURRENT4"/>
+        <result property="current5" column="CURRENT5"/>
+        <result property="current6" column="CURRENT6"/>
+        <result property="currentx1" column="CURRENTX1"/>
+        <result property="torque1" column="TORQUE1"/>
+        <result property="torque2" column="TORQUE2"/>
+        <result property="torque3" column="TORQUE3"/>
+        <result property="torque4" column="TORQUE4"/>
+        <result property="torque5" column="TORQUE5"/>
+        <result property="torque6" column="TORQUE6"/>
+        <result property="torquex1" column="TORQUEX1"/>
+        <result property="power1" column="POWER1"/>
+        <result property="power2" column="POWER2"/>
+        <result property="power3" column="POWER3"/>
+        <result property="power4" column="POWER4"/>
+        <result property="power5" column="POWER5"/>
+        <result property="power6" column="POWER6"/>
+        <result property="powerx1" column="POWERX1"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+    <select id="getLi" resultType="com.iapmhad.ame_hdym.entity.AxisinfoEntity">
+        SELECT * FROM axisinfo WHERE id>#{id}
+    </select>
+
+</mapper>

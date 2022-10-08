@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.processParametersJqrzk.dao.FastenDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.processParametersJqrzk.entity.FastenEntity" id="fastenMap">
+        <result property="id" column="ID"/>
+        <result property="prefastenBrand" column="PREFASTEN_BRAND"/>
+        <result property="prefastenAperture" column="PREFASTEN_APERTURE"/>
+        <result property="prefastenLength" column="PREFASTEN_LENGTH"/>
+        <result property="storehosePos" column="STOREHOSE_POS"/>
+    </resultMap>
+
+
+</mapper>

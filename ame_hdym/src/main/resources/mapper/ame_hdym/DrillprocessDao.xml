@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.ame_hdym.dao.DrillprocessDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.ame_hdym.entity.DrillprocessEntity" id="drillprocessMap">
+        <result property="id" column="ID"/>
+        <result property="diameter" column="Diameter"/>
+        <result property="rotvel1" column="RotVel1"/>
+        <result property="vel1" column="Vel1"/>
+        <result property="rotvel2" column="RotVel2"/>
+        <result property="vel2" column="Vel2"/>
+        <result property="rotvel3" column="RotVel3"/>
+        <result property="vel3" column="Vel3"/>
+        <result property="socketrotvel" column="SocketRotVel"/>
+        <result property="socketvel" column="SocketVel"/>
+        <result property="fastvel" column="FastVel"/>
+        <result property="deep" column="Deep"/>
+        <result property="fastentype" column="FastenType"/>
+        <result property="press" column="Press"/>
+        <result property="advance" column="Advance"/>
+        <result property="toolname" column="ToolName"/>
+        <result property="remark0" column="Remark0"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+
+
+</mapper>

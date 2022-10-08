@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.JqrSpecificationDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.JqrSpecificationEntity" id="jqrSpecificationMap">
+        <result property="id" column="ID"/>
+        <result property="deviceId" column="DEVICE_ID"/>
+        <result property="deviceCode" column="DEVICE_CODE"/>
+        <result property="deviceName" column="DEVICE_NAME"/>
+        <result property="workLoad" column="WORK_LOAD"/>
+        <result property="addLoad" column="ADD_LOAD"/>
+        <result property="reposErrU" column="REPOS_ERR_U"/>
+        <result property="reposErrL" column="REPOS_ERR_L"/>
+        <result property="installForm" column="INSTALL_FORM"/>
+        <result property="controlSys" column="CONTROL_SYS"/>
+        <result property="a1RangeU" column="A1_RANGE_U"/>
+        <result property="a1RangeL" column="A1_RANGE_L"/>
+        <result property="a1Speed" column="A1_SPEED"/>
+        <result property="a2RangeU" column="A2_RANGE_U"/>
+        <result property="a2RangeL" column="A2_RANGE_L"/>
+        <result property="a2Speed" column="A2_SPEED"/>
+        <result property="a3RangeU" column="A3_RANGE_U"/>
+        <result property="a3RangeL" column="A3_RANGE_L"/>
+        <result property="a3Speed" column="A3_SPEED"/>
+        <result property="a4RangeU" column="A4_RANGE_U"/>
+        <result property="a4RangeL" column="A4_RANGE_L"/>
+        <result property="a4Speed" column="A4_SPEED"/>
+        <result property="a5RangeU" column="A5_RANGE_U"/>
+        <result property="a5RangeL" column="A5_RANGE_L"/>
+        <result property="a5Speed" column="A5_SPEED"/>
+        <result property="a6RangeU" column="A6_RANGE_U"/>
+        <result property="a6RangeL" column="A6_RANGE_L"/>
+        <result property="a6Speed" column="A6_SPEED"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.JqrSpecificationEntity">
+        SELECT * FROM jqr_specification WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.JqrSpecificationEntity">
+        SELECT * FROM jqr_specification  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

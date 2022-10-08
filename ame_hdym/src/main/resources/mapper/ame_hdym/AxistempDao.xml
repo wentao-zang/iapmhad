@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.ame_hdym.dao.AxistempDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.ame_hdym.entity.AxistempEntity" id="axistempMap">
+        <result property="id" column="ID"/>
+        <result property="temp1" column="TEMP1"/>
+        <result property="temp2" column="TEMP2"/>
+        <result property="temp3" column="TEMP3"/>
+        <result property="temp4" column="TEMP4"/>
+        <result property="temp5" column="TEMP5"/>
+        <result property="temp6" column="TEMP6"/>
+        <result property="tempx1" column="TEMPX1"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+
+
+</mapper>

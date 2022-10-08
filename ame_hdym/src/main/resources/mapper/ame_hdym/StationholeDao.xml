@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.ame_hdym.dao.StationholeDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.ame_hdym.entity.StationholeEntity" id="stationholeMap">
+        <result property="id" column="ID"/>
+        <result property="theoryx" column="TheoryX"/>
+        <result property="theoryy" column="TheoryY"/>
+        <result property="theoryz" column="TheoryZ"/>
+        <result property="theorya" column="TheoryA"/>
+        <result property="theoryb" column="TheoryB"/>
+        <result property="theoryc" column="TheoryC"/>
+        <result property="actualx" column="ActualX"/>
+        <result property="actualy" column="ActualY"/>
+        <result property="actualz" column="ActualZ"/>
+        <result property="actuala" column="ActualA"/>
+        <result property="actualb" column="ActualB"/>
+        <result property="actualc" column="ActualC"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.ame_hdym.dao.TrycutinfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.ame_hdym.entity.TrycutinfoEntity" id="trycutinfoMap">
+        <result property="id" column="ID"/>
+        <result property="code" column="Code"/>
+        <result property="width" column="Width"/>
+        <result property="height" column="Height"/>
+        <result property="thick" column="Thick"/>
+        <result property="gap" column="Gap"/>
+        <result property="diamter" column="Diamter"/>
+        <result property="point1x" column="Point1X"/>
+        <result property="point2x" column="Point2X"/>
+        <result property="point3x" column="Point3X"/>
+        <result property="point1y" column="Point1Y"/>
+        <result property="point2y" column="Point2Y"/>
+        <result property="point3y" column="Point3Y"/>
+        <result property="point1z" column="Point1Z"/>
+        <result property="point2z" column="Point2Z"/>
+        <result property="point3z" column="Point3Z"/>
+        <result property="point1a" column="Point1A"/>
+        <result property="point2a" column="Point2A"/>
+        <result property="point3a" column="Point3A"/>
+        <result property="point1b" column="Point1B"/>
+        <result property="point2b" column="Point2B"/>
+        <result property="point3b" column="Point3B"/>
+        <result property="point1c" column="Point1C"/>
+        <result property="point2c" column="Point2C"/>
+        <result property="point3c" column="Point3C"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+
+
+</mapper>

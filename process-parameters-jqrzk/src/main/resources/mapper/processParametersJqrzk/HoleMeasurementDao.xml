@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.processParametersJqrzk.dao.HoleMeasurementDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.processParametersJqrzk.entity.HoleMeasurementEntity" id="holeMeasurementMap">
+        <result property="id" column="ID"/>
+        <result property="standardAperture" column="STANDARD_APERTURE"/>
+        <result property="startVoltage" column="START_VOLTAGE"/>
+        <result property="zeroPos" column="ZERO_POS"/>
+        <result property="measureDepth" column="MEASURE_DEPTH"/>
+        <result property="measureSpeed" column="MEASURE_SPEED"/>
+        <result property="measureLead" column="MEASURE_LEAD"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.ame_hdym.dao.HolediameasDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.ame_hdym.entity.HolediameasEntity" id="holediameasMap">
+        <result property="id" column="ID"/>
+        <result property="diameter" column="Diameter"/>
+        <result property="orivol" column="OriVol"/>
+        <result property="oripos" column="OriPos"/>
+        <result property="advance" column="Advance"/>
+        <result property="deep" column="Deep"/>
+        <result property="vel" column="Vel"/>
+    </resultMap>
+
+
+</mapper>

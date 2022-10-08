@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.ame_hdym.dao.TrycutholesDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.ame_hdym.entity.TrycutholesEntity" id="trycutholesMap">
+        <result property="holeid" column="holeID"/>
+        <result property="code" column="Code"/>
+        <result property="holerow" column="holeRow"/>
+        <result property="holecol" column="holeCol"/>
+        <result property="status" column="Status"/>
+        <result property="holex" column="holeX"/>
+        <result property="holey" column="holeY"/>
+        <result property="holez" column="holeZ"/>
+        <result property="holea" column="holeA"/>
+        <result property="holeb" column="holeB"/>
+        <result property="holec" column="holeC"/>
+        <result property="pholex" column="PholeX"/>
+        <result property="pholey" column="PholeY"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+
+
+</mapper>

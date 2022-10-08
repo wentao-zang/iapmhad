@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.ame_hdym.dao.DpprocessDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.ame_hdym.entity.DpprocessEntity" id="dpprocessMap">
+        <result property="id" column="ID"/>
+        <result property="code" column="Code"/>
+        <result property="vel" column="Vel"/>
+        <result property="rotvel" column="RotVel"/>
+        <result property="fastvel" column="FastVel"/>
+        <result property="deep" column="Deep"/>
+        <result property="oripos" column="OriPos"/>
+        <result property="press" column="Press"/>
+        <result property="dis" column="Dis"/>
+        <result property="pos" column="Pos"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+
+
+</mapper>

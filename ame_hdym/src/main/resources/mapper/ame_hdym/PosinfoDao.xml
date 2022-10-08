@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.ame_hdym.dao.PosinfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.ame_hdym.entity.PosinfoEntity" id="posinfoMap">
+        <result property="id" column="ID"/>
+        <result property="x" column="X"/>
+        <result property="y" column="Y"/>
+        <result property="z" column="Z"/>
+        <result property="x1" column="X1"/>
+        <result property="x11" column="X11"/>
+        <result property="z11" column="Z11"/>
+        <result property="v2" column="V2"/>
+        <result property="v3" column="V3"/>
+        <result property="a1" column="A1"/>
+        <result property="a2" column="A2"/>
+        <result property="a3" column="A3"/>
+        <result property="a4" column="A4"/>
+        <result property="a5" column="A5"/>
+        <result property="a6" column="A6"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+    <select id="getLi" resultType="com.iapmhad.ame_hdym.entity.PosinfoEntity">
+        SELECT * FROM posinfo WHERE id>#{id}
+    </select>
+
+</mapper>

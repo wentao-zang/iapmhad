@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.ame_hdym.dao.UsersDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.ame_hdym.entity.UsersEntity" id="usersMap">
+        <result property="id" column="ID"/>
+        <result property="code" column="CODE"/>
+        <result property="pwd" column="PWD"/>
+        <result property="name" column="NAME"/>
+        <result property="remark" column="REMARK"/>
+        <result property="time" column="Time"/>
+        <result property="r1" column="R1"/>
+        <result property="r2" column="R2"/>
+        <result property="r3" column="R3"/>
+        <result property="r4" column="R4"/>
+        <result property="r5" column="R5"/>
+        <result property="r6" column="R6"/>
+        <result property="r7" column="R7"/>
+        <result property="r8" column="R8"/>
+        <result property="r9" column="R9"/>
+        <result property="r10" column="R10"/>
+        <result property="r11" column="R11"/>
+        <result property="r12" column="R12"/>
+        <result property="r13" column="R13"/>
+        <result property="r14" column="R14"/>
+        <result property="r15" column="R15"/>
+        <result property="r16" column="R16"/>
+        <result property="r17" column="R17"/>
+        <result property="r18" column="R18"/>
+        <result property="r19" column="R19"/>
+        <result property="r20" column="R20"/>
+    </resultMap>
+
+
+</mapper>

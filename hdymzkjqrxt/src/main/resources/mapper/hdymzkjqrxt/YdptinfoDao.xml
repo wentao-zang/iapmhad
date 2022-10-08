@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.YdptinfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.YdptinfoEntity" id="ydptinfoMap">
+        <result property="id" column="ID"/>
+        <result property="pos" column="POS"/>
+        <result property="vel" column="VEL"/>
+        <result property="ac" column="AC"/>
+        <result property="rotvel" column="ROTVEL"/>
+        <result property="current" column="CURRENT"/>
+        <result property="torque" column="TORQUE"/>
+        <result property="temp" column="TEMP"/>
+        <result property="time" column="TIME"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.YdptinfoEntity">
+        SELECT * FROM ydptinfo WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.YdptinfoEntity">
+        SELECT * FROM ydptinfo  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

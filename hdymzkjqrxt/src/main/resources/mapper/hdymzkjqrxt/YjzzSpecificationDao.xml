@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.YjzzSpecificationDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.YjzzSpecificationEntity" id="yjzzSpecificationMap">
+        <result property="id" column="ID"/>
+        <result property="deviceId" column="DEVICE_ID"/>
+        <result property="deviceCode" column="DEVICE_CODE"/>
+        <result property="deviceName" column="DEVICE_NAME"/>
+        <result property="cylinderCode" column="CYLINDER_CODE"/>
+        <result property="cylinderManufacturer" column="CYLINDER_MANUFACTURER"/>
+        <result property="rasterCode" column="RASTER_CODE"/>
+        <result property="rasterManufacturer" column="RASTER_MANUFACTURER"/>
+        <result property="rasterRange" column="RASTER_RANGE"/>
+        <result property="railCode" column="RAIL_CODE"/>
+        <result property="railRange" column="RAIL_RANGE"/>
+        <result property="railSpeed" column="RAIL_SPEED"/>
+        <result property="presserTravel" column="PRESSER_TRAVEL"/>
+        <result property="presserForceU" column="PRESSER_FORCE_U"/>
+        <result property="presserForceL" column="PRESSER_FORCE_L"/>
+        <result property="loadErrU" column="LOAD_ERR_U"/>
+        <result property="loadErrL" column="LOAD_ERR_L"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.YjzzSpecificationEntity">
+        SELECT * FROM yjzz_specification WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.YjzzSpecificationEntity">
+        SELECT * FROM yjzz_specification  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

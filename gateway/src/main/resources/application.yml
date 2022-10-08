@@ -1,0 +1,51 @@
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedHeaders: "*"
+            allowedOrigins: "*"
+            allowCredentials: true
+            allowedMethods:
+              - GET
+              - POST
+              - DELETE
+              - PUT
+              - OPTION
+
+      routes:
+        - id: member_route
+          uri: lb://member
+          predicates:
+            - Path=/mem/**
+          filters:
+            - RewritePath=/mem/(?<segment>.*),/member/$\{segment}
+
+        - id: hdymzkjqrxt_route
+          uri: lb://hdymzkjqrxt
+          predicates:
+            - Path=/hdym/**
+          filters:
+            - RewritePath=/hdym/(?<segment>.*),/hdymzkjqrxt/$\{segment}
+
+        - id: hdym_pp_route
+          uri: lb://process-parameters-jqrzk
+          predicates:
+            - Path=/hdympp/**
+          filters:
+            - RewritePath=/hdympp/(?<segment>.*),/processParametersJqrzk/$\{segment}
+
+        - id: data_route
+          uri: lb://data-migration-service
+          predicates:
+            - Path=/dd/**
+          filters:
+            - RewritePath=/dd/(?<segment>.*),/data/$\{segment}
+
+        - id: ame_hdym_route
+          uri: lb://amehdym
+          predicates:
+            - Path=/amehdym/**
+          filters:
+            - RewritePath=/amehdym/(?<segment>.*),/ame_hdym/$\{segment}
