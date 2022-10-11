@@ -34,7 +34,7 @@ public class HoleAccuracyController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:holeaccuracy:list")
+    ////@RequiresPermissions("hdymzkjqrxt:holeaccuracy:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = holeAccuracyService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class HoleAccuracyController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:holeaccuracy:info")
+    ////@RequiresPermissions("hdymzkjqrxt:holeaccuracy:info")
     public R info(@PathVariable("id") Integer id){
 		HoleAccuracyEntity holeAccuracy = holeAccuracyService.getById(id);
 
@@ -77,7 +77,7 @@ public class HoleAccuracyController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:holeaccuracy:save")
+    ////@RequiresPermissions("hdymzkjqrxt:holeaccuracy:save")
     public R save(@RequestBody HoleAccuracyEntity holeAccuracy){
 		holeAccuracyService.save(holeAccuracy);
 
@@ -88,7 +88,7 @@ public class HoleAccuracyController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:holeaccuracy:update")
+    ////@RequiresPermissions("hdymzkjqrxt:holeaccuracy:update")
     public R update(@RequestBody HoleAccuracyEntity holeAccuracy){
 		holeAccuracyService.updateById(holeAccuracy);
 
@@ -99,7 +99,7 @@ public class HoleAccuracyController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:holeaccuracy:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:holeaccuracy:delete")
     public R delete(@RequestBody Integer[] ids){
 		holeAccuracyService.removeByIds(Arrays.asList(ids));
 

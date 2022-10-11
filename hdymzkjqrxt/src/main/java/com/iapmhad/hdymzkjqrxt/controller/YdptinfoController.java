@@ -34,7 +34,7 @@ public class YdptinfoController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:ydptinfo:list")
+    ////@RequiresPermissions("hdymzkjqrxt:ydptinfo:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = ydptinfoService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class YdptinfoController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:ydptinfo:info")
+    ////@RequiresPermissions("hdymzkjqrxt:ydptinfo:info")
     public R info(@PathVariable("id") Integer id){
 		YdptinfoEntity ydptinfo = ydptinfoService.getById(id);
 
@@ -77,7 +77,7 @@ public class YdptinfoController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:ydptinfo:save")
+    ////@RequiresPermissions("hdymzkjqrxt:ydptinfo:save")
     public R save(@RequestBody YdptinfoEntity ydptinfo){
 		ydptinfoService.save(ydptinfo);
 
@@ -88,7 +88,7 @@ public class YdptinfoController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:ydptinfo:update")
+    ////@RequiresPermissions("hdymzkjqrxt:ydptinfo:update")
     public R update(@RequestBody YdptinfoEntity ydptinfo){
 		ydptinfoService.updateById(ydptinfo);
 
@@ -99,7 +99,7 @@ public class YdptinfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:ydptinfo:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:ydptinfo:delete")
     public R delete(@RequestBody Integer[] ids){
 		ydptinfoService.removeByIds(Arrays.asList(ids));
 

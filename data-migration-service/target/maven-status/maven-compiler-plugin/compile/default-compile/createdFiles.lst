@@ -1,0 +1,4 @@
+com\iapmhad\datamigrationservice\method\IdSearch.class
+com\iapmhad\datamigrationservice\controller\DataMigrationService.class
+com\iapmhad\datamigrationservice\DatamigrationServiceApplication.class
+com\iapmhad\datamigrationservice\method\DataSave.class

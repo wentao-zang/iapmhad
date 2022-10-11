@@ -34,7 +34,7 @@ public class StatusinfoController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:statusinfo:list")
+    ////@RequiresPermissions("hdymzkjqrxt:statusinfo:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = statusinfoService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class StatusinfoController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:statusinfo:info")
+    ////@RequiresPermissions("hdymzkjqrxt:statusinfo:info")
     public R info(@PathVariable("id") Integer id){
 		StatusinfoEntity statusinfo = statusinfoService.getById(id);
 
@@ -77,7 +77,7 @@ public class StatusinfoController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:statusinfo:save")
+    ////@RequiresPermissions("hdymzkjqrxt:statusinfo:save")
     public R save(@RequestBody StatusinfoEntity statusinfo){
 		statusinfoService.save(statusinfo);
 
@@ -88,7 +88,7 @@ public class StatusinfoController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:statusinfo:update")
+    ////@RequiresPermissions("hdymzkjqrxt:statusinfo:update")
     public R update(@RequestBody StatusinfoEntity statusinfo){
 		statusinfoService.updateById(statusinfo);
 
@@ -99,7 +99,7 @@ public class StatusinfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:statusinfo:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:statusinfo:delete")
     public R delete(@RequestBody Integer[] ids){
 		statusinfoService.removeByIds(Arrays.asList(ids));
 

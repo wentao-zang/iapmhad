@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.JgzzSpecificationDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.JgzzSpecificationEntity" id="jgzzSpecificationMap">
+        <result property="id" column="ID"/>
+        <result property="deviceId" column="DEVICE_ID"/>
+        <result property="deviceCode" column="DEVICE_CODE"/>
+        <result property="deviceName" column="DEVICE_NAME"/>
+        <result property="moterCode" column="MOTER_CODE"/>
+        <result property="moterManufacturer" column="MOTER_MANUFACTURER"/>
+        <result property="ballscrewCode" column="BALLSCREW_CODE"/>
+        <result property="ballscrewManufacturer" column="BALLSCREW_MANUFACTURER"/>
+        <result property="rasterCode" column="RASTER_CODE"/>
+        <result property="rasterManufacturer" column="RASTER_MANUFACTURER"/>
+        <result property="rasterRange" column="RASTER_RANGE"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.JgzzSpecificationEntity">
+        SELECT * FROM jgzz_specification WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.JgzzSpecificationEntity">
+        SELECT * FROM jgzz_specification  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

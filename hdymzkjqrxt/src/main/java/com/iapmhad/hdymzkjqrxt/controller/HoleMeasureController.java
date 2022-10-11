@@ -27,7 +27,7 @@ public class HoleMeasureController {
     private HoleMeasureService holeMeasureService;
 
     @RequestMapping("/getlast")
-    //@RequiresPermissions("hdymzkjqrxt:cpproduct:list")
+    ////@RequiresPermissions("hdymzkjqrxt:cpproduct:list")
     public HoleMeasureEntity getlast(@RequestParam Map<String,Object> params){
         HoleMeasureEntity last = holeMeasureService.getLast();
 //        Double holeDia = last.getHoleDia();
@@ -37,7 +37,7 @@ public class HoleMeasureController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:cpproduct:list")
+    ////@RequiresPermissions("hdymzkjqrxt:cpproduct:list")
     public Object[] list(@RequestParam Map<String,Object> params){
 //        for (Map.Entry<String,Object> entry : params.entrySet()) {
 //            System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());
@@ -63,7 +63,7 @@ public class HoleMeasureController {
     }
 
     @RequestMapping("/statistics")
-    //@RequiresPermissions("hdymzkjqrxt:cpproduct:list")
+    ////@RequiresPermissions("hdymzkjqrxt:cpproduct:list")
     public Object[] statistics(@RequestParam Map<String,Object> params){
         for (Map.Entry<String,Object> entry : params.entrySet()) {
             System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());
@@ -106,7 +106,7 @@ public class HoleMeasureController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:cpproduct:info")
+    ////@RequiresPermissions("hdymzkjqrxt:cpproduct:info")
     public R info(@PathVariable("id") Integer id){
 		HoleMeasureEntity  holeMeasure= holeMeasureService.getById(id);
         System.out.println(holeMeasure);
@@ -117,7 +117,7 @@ public class HoleMeasureController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:cpproduct:save")
+    ////@RequiresPermissions("hdymzkjqrxt:cpproduct:save")
     public R save(@RequestBody HoleMeasureEntity holeMeasure){
 		holeMeasureService.save(holeMeasure);
 
@@ -128,7 +128,7 @@ public class HoleMeasureController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:cpproduct:update")
+    ////@RequiresPermissions("hdymzkjqrxt:cpproduct:update")
     public R update(@RequestBody HoleMeasureEntity holeMeasure){
         holeMeasureService.updateById(holeMeasure);
 
@@ -139,7 +139,7 @@ public class HoleMeasureController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:cpproduct:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:cpproduct:delete")
     public R delete(@RequestBody Integer[] ids){
         holeMeasureService.removeByIds(Arrays.asList(ids));
 

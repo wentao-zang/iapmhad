@@ -34,7 +34,7 @@ public class PosinfoController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:posinfo:list")
+    ////@RequiresPermissions("hdymzkjqrxt:posinfo:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = posinfoService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class PosinfoController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:posinfo:info")
+    ////@RequiresPermissions("hdymzkjqrxt:posinfo:info")
     public R info(@PathVariable("id") Integer id){
 		PosinfoEntity posinfo = posinfoService.getById(id);
 
@@ -77,7 +77,7 @@ public class PosinfoController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:posinfo:save")
+    ////@RequiresPermissions("hdymzkjqrxt:posinfo:save")
     public R save(@RequestBody PosinfoEntity posinfo){
 		posinfoService.save(posinfo);
 
@@ -88,7 +88,7 @@ public class PosinfoController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:posinfo:update")
+    ////@RequiresPermissions("hdymzkjqrxt:posinfo:update")
     public R update(@RequestBody PosinfoEntity posinfo){
 		posinfoService.updateById(posinfo);
 
@@ -99,7 +99,7 @@ public class PosinfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:posinfo:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:posinfo:delete")
     public R delete(@RequestBody Integer[] ids){
 		posinfoService.removeByIds(Arrays.asList(ids));
 

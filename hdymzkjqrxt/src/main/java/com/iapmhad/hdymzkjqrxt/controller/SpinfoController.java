@@ -34,7 +34,7 @@ public class SpinfoController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:spinfo:list")
+    ////@RequiresPermissions("hdymzkjqrxt:spinfo:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = spinfoService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class SpinfoController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:spinfo:info")
+    ////@RequiresPermissions("hdymzkjqrxt:spinfo:info")
     public R info(@PathVariable("id") Integer id){
 		SpinfoEntity spinfo = spinfoService.getById(id);
 
@@ -77,7 +77,7 @@ public class SpinfoController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:spinfo:save")
+    ////@RequiresPermissions("hdymzkjqrxt:spinfo:save")
     public R save(@RequestBody SpinfoEntity spinfo){
 		spinfoService.save(spinfo);
 
@@ -88,7 +88,7 @@ public class SpinfoController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:spinfo:update")
+    ////@RequiresPermissions("hdymzkjqrxt:spinfo:update")
     public R update(@RequestBody SpinfoEntity spinfo){
 		spinfoService.updateById(spinfo);
 
@@ -99,7 +99,7 @@ public class SpinfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:spinfo:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:spinfo:delete")
     public R delete(@RequestBody Integer[] ids){
 		spinfoService.removeByIds(Arrays.asList(ids));
 

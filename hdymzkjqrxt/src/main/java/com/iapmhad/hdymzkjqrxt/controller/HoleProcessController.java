@@ -34,7 +34,7 @@ public class HoleProcessController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:holeprocess:list")
+    ////@RequiresPermissions("hdymzkjqrxt:holeprocess:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = holeProcessService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class HoleProcessController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:holeprocess:info")
+    ////@RequiresPermissions("hdymzkjqrxt:holeprocess:info")
     public R info(@PathVariable("id") Integer id){
 		HoleProcessEntity holeProcess = holeProcessService.getById(id);
 
@@ -77,7 +77,7 @@ public class HoleProcessController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:holeprocess:save")
+    ////@RequiresPermissions("hdymzkjqrxt:holeprocess:save")
     public R save(@RequestBody HoleProcessEntity holeProcess){
 		holeProcessService.save(holeProcess);
 
@@ -88,7 +88,7 @@ public class HoleProcessController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:holeprocess:update")
+    ////@RequiresPermissions("hdymzkjqrxt:holeprocess:update")
     public R update(@RequestBody HoleProcessEntity holeProcess){
 		holeProcessService.updateById(holeProcess);
 
@@ -99,7 +99,7 @@ public class HoleProcessController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:holeprocess:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:holeprocess:delete")
     public R delete(@RequestBody Integer[] ids){
 		holeProcessService.removeByIds(Arrays.asList(ids));
 

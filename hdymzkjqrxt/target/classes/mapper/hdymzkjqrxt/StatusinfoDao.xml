@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.StatusinfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.StatusinfoEntity" id="statusinfoMap">
+        <result property="id" column="ID"/>
+        <result property="toolstatus" column="ToolStatus"/>
+        <result property="footopenstatus" column="FootOpenStatus"/>
+        <result property="footclosestatus" column="FootCloseStatus"/>
+        <result property="cameracoveropenstatus" column="CameraCoverOpenStatus"/>
+        <result property="cameracoverclosestatus" column="CameraCoverCloseStatus"/>
+        <result property="toolcoveropenstatus" column="ToolCoverOpenStatus"/>
+        <result property="toolcoverclosestatus" column="ToolCoverCloseStatus"/>
+        <result property="toolsopenstatus" column="ToolSOpenStatus"/>
+        <result property="toolsclosestatus" column="ToolSCloseStatus"/>
+        <result property="holemeaopenstatus" column="HoleMeaOpenStatus"/>
+        <result property="holemeaclosestatus" column="HoleMeaCloseStatus"/>
+        <result property="spopenstatus" column="SPOpenStatus"/>
+        <result property="spclosestatus" column="SPCloseStatus"/>
+        <result property="oilopenstatus" column="OilOpenStatus"/>
+        <result property="oilclosestatus" column="OilCloseStatus"/>
+        <result property="recuropenstatus" column="RecurOpenStatus"/>
+        <result property="recurclosestatus" column="RecurCloseStatus"/>
+        <result property="flangeopenstatus" column="FlangeOpenStatus"/>
+        <result property="flangeclosestatus" column="FlangeCloseStatus"/>
+        <result property="toolchangeropenstatus" column="ToolchangerOpenStatus"/>
+        <result property="toolchangerclosestatus" column="ToolchangerCloseStatus"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.StatusinfoEntity">
+        SELECT * FROM statusinfo WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.StatusinfoEntity">
+        SELECT * FROM statusinfo  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

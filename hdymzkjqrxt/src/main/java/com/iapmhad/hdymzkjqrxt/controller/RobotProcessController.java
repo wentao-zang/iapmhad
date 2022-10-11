@@ -34,7 +34,7 @@ public class RobotProcessController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:robotprocess:list")
+    ////@RequiresPermissions("hdymzkjqrxt:robotprocess:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = robotProcessService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class RobotProcessController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:robotprocess:info")
+    ////@RequiresPermissions("hdymzkjqrxt:robotprocess:info")
     public R info(@PathVariable("id") Integer id){
 		RobotProcessEntity robotProcess = robotProcessService.getById(id);
 
@@ -77,7 +77,7 @@ public class RobotProcessController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:robotprocess:save")
+    ////@RequiresPermissions("hdymzkjqrxt:robotprocess:save")
     public R save(@RequestBody RobotProcessEntity robotProcess){
 		robotProcessService.save(robotProcess);
 
@@ -88,7 +88,7 @@ public class RobotProcessController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:robotprocess:update")
+    ////@RequiresPermissions("hdymzkjqrxt:robotprocess:update")
     public R update(@RequestBody RobotProcessEntity robotProcess){
 		robotProcessService.updateById(robotProcess);
 
@@ -99,7 +99,7 @@ public class RobotProcessController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:robotprocess:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:robotprocess:delete")
     public R delete(@RequestBody Integer[] ids){
 		robotProcessService.removeByIds(Arrays.asList(ids));
 

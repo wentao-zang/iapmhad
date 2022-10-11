@@ -19,7 +19,7 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.iamphad</groupId>
+            <groupId>com.iapmhad</groupId>
             <artifactId>common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <exclusions>

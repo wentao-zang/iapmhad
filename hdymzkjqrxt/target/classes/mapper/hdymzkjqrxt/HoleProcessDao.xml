@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.HoleProcessDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.HoleProcessEntity" id="holeProcessMap">
+        <result property="id" column="ID"/>
+        <result property="holeId" column="HOLE_ID"/>
+        <result property="holeName" column="HOLE_NAME"/>
+        <result property="processType" column="PROCESS_TYPE"/>
+        <result property="material" column="MATERIAL"/>
+        <result property="aperture" column="APERTURE"/>
+        <result property="dimpleDepth" column="DIMPLE_DEPTH"/>
+        <result property="dimpleRotation" column="DIMPLE_ROTATION"/>
+        <result property="dimpleFeedRate" column="DIMPLE_FEED_RATE"/>
+        <result property="holeDepth" column="HOLE_DEPTH"/>
+        <result property="holeRotation" column="HOLE_ROTATION"/>
+        <result property="holeFeedRate" column="HOLE_FEED_RATE"/>
+        <result property="rapidFeedRate" column="RAPID_FEED_RATE"/>
+        <result property="startPos" column="START_POS"/>
+        <result property="toolId" column="TOOL_ID"/>
+        <result property="ncCode" column="NC_CODE"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.HoleProcessEntity">
+        SELECT * FROM hole_process WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.HoleProcessEntity">
+        SELECT * FROM hole_process  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

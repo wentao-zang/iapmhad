@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.processParametersJqrzk.dao.NonColdExtrusionHoleToolDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.processParametersJqrzk.entity.NonColdExtrusionHoleToolEntity" id="nonColdExtrusionHoleToolMap">
+        <result property="id" column="ID"/>
+        <result property="toolName" column="TOOL_NAME"/>
+        <result property="toolAperture" column="TOOL_APERTURE"/>
+        <result property="edgeLength" column="EDGE_LENGTH"/>
+        <result property="toolLife" column="TOOL_LIFE"/>
+        <result property="noseLength" column="NOSE_LENGTH"/>
+        <result property="lengthmeter" column="LENGTHMETER"/>
+        <result property="storehosePos" column="STOREHOSE_POS"/>
+    </resultMap>
+
+
+</mapper>

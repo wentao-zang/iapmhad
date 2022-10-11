@@ -19,7 +19,7 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
-    <name>iamphad</name>
+    <name>iapmhad</name>
     <description>聚合服务</description>
 
     <packaging>pom</packaging>

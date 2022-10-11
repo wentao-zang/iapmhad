@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.HoleAccuracyDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.HoleAccuracyEntity" id="holeAccuracyMap">
+        <result property="id" column="ID"/>
+        <result property="holeId" column="HOLE_ID"/>
+        <result property="holeName" column="HOLE_NAME"/>
+        <result property="marginErrU" column="MARGIN_ERR_U"/>
+        <result property="marginErrL" column="MARGIN_ERR_L"/>
+        <result property="spacingErrU" column="SPACING_ERR_U"/>
+        <result property="spacingErrL" column="SPACING_ERR_L"/>
+        <result property="perpendErrU" column="PERPEND_ERR_U"/>
+        <result property="perpendErrL" column="PERPEND_ERR_L"/>
+        <result property="apertureErrU" column="APERTURE_ERR_U"/>
+        <result property="apertureErrL" column="APERTURE_ERR_L"/>
+        <result property="roughness" column="ROUGHNESS"/>
+        <result property="depthErrU" column="DEPTH_ERR_U"/>
+        <result property="depthErrL" column="DEPTH_ERR_L"/>
+        <result property="angleErrU" column="ANGLE_ERR_U"/>
+        <result property="angleErrL" column="ANGLE_ERR_L"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.HoleAccuracyEntity">
+        SELECT * FROM hole_accuracy WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.HoleAccuracyEntity">
+        SELECT * FROM hole_accuracy  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

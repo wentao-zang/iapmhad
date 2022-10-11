@@ -34,7 +34,7 @@ public class ProductinfoController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:productinfo:list")
+    ////@RequiresPermissions("hdymzkjqrxt:productinfo:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = productinfoService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class ProductinfoController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:productinfo:info")
+    ////@RequiresPermissions("hdymzkjqrxt:productinfo:info")
     public R info(@PathVariable("id") Integer id){
 		ProductinfoEntity productinfo = productinfoService.getById(id);
 
@@ -77,7 +77,7 @@ public class ProductinfoController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:productinfo:save")
+    ////@RequiresPermissions("hdymzkjqrxt:productinfo:save")
     public R save(@RequestBody ProductinfoEntity productinfo){
 		productinfoService.save(productinfo);
 
@@ -88,7 +88,7 @@ public class ProductinfoController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:productinfo:update")
+    ////@RequiresPermissions("hdymzkjqrxt:productinfo:update")
     public R update(@RequestBody ProductinfoEntity productinfo){
 		productinfoService.updateById(productinfo);
 
@@ -99,7 +99,7 @@ public class ProductinfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:productinfo:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:productinfo:delete")
     public R delete(@RequestBody Integer[] ids){
 		productinfoService.removeByIds(Arrays.asList(ids));
 

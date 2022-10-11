@@ -34,7 +34,7 @@ public class JqrSpecificationController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:jqrspecification:list")
+    ////@RequiresPermissions("hdymzkjqrxt:jqrspecification:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = jqrSpecificationService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class JqrSpecificationController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:jqrspecification:info")
+    ////@RequiresPermissions("hdymzkjqrxt:jqrspecification:info")
     public R info(@PathVariable("id") Integer id){
 		JqrSpecificationEntity jqrSpecification = jqrSpecificationService.getById(id);
 
@@ -77,7 +77,7 @@ public class JqrSpecificationController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:jqrspecification:save")
+    ////@RequiresPermissions("hdymzkjqrxt:jqrspecification:save")
     public R save(@RequestBody JqrSpecificationEntity jqrSpecification){
 		jqrSpecificationService.save(jqrSpecification);
 
@@ -88,7 +88,7 @@ public class JqrSpecificationController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:jqrspecification:update")
+    ////@RequiresPermissions("hdymzkjqrxt:jqrspecification:update")
     public R update(@RequestBody JqrSpecificationEntity jqrSpecification){
 		jqrSpecificationService.updateById(jqrSpecification);
 
@@ -99,7 +99,7 @@ public class JqrSpecificationController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:jqrspecification:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:jqrspecification:delete")
     public R delete(@RequestBody Integer[] ids){
 		jqrSpecificationService.removeByIds(Arrays.asList(ids));
 

@@ -34,7 +34,7 @@ public class CpProductController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:cpproduct:list")
+    ////@RequiresPermissions("hdymzkjqrxt:cpproduct:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = cpProductService.queryPage(params);
         return R.ok().put("page", page);
@@ -66,7 +66,7 @@ public class CpProductController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:cpproduct:info")
+    ////@RequiresPermissions("hdymzkjqrxt:cpproduct:info")
     public R info(@PathVariable("id") Integer id){
 		CpProductEntity cpProduct = cpProductService.getById(id);
 
@@ -77,7 +77,7 @@ public class CpProductController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:cpproduct:save")
+    ////@RequiresPermissions("hdymzkjqrxt:cpproduct:save")
     public R save(@RequestBody CpProductEntity cpProduct){
 		cpProductService.save(cpProduct);
 
@@ -88,7 +88,7 @@ public class CpProductController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:cpproduct:update")
+    ////@RequiresPermissions("hdymzkjqrxt:cpproduct:update")
     public R update(@RequestBody CpProductEntity cpProduct){
 		cpProductService.updateById(cpProduct);
 
@@ -99,7 +99,7 @@ public class CpProductController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:cpproduct:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:cpproduct:delete")
     public R delete(@RequestBody Integer[] ids){
 		cpProductService.removeByIds(Arrays.asList(ids));
 

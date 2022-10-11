@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.yhmachinedrilling.dao.SpinfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.yhmachinedrilling.entity.SpinfoEntity" id="spinfoMap">
+        <result property="id" column="ID"/>
+        <result property="rotvel" column="RotVel"/>
+        <result property="vel" column="Vel"/>
+        <result property="temp" column="Temp"/>
+        <result property="current" column="Current"/>
+        <result property="torque" column="Torque"/>
+        <result property="power" column="Power"/>
+        <result property="posx" column="POSX"/>
+        <result property="posy" column="POSY"/>
+        <result property="posz" column="POSZ"/>
+    </resultMap>
+
+
+</mapper>

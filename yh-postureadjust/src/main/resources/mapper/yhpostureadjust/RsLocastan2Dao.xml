@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.yhpostureadjust.dao.RsLocastan2Dao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.yhpostureadjust.entity.RsLocastan2Entity" id="rsLocastan2Map">
+        <result property="id" column="id"/>
+        <result property="aircraftId" column="aircraft_id"/>
+        <result property="flightId" column="flight_id"/>
+        <result property="fixtureId" column="fixture_id"/>
+        <result property="locasx5" column="locasx5"/>
+        <result property="locasy5" column="locasy5"/>
+        <result property="locasz5" column="locasz5"/>
+        <result property="locasx6" column="locasx6"/>
+        <result property="locasy6" column="locasy6"/>
+        <result property="locasz6" column="locasz6"/>
+        <result property="locasx7" column="locasx7"/>
+        <result property="locasy7" column="locasy7"/>
+        <result property="locasz7" column="locasz7"/>
+        <result property="locasx8" column="locasx8"/>
+        <result property="locasy8" column="locasy8"/>
+        <result property="locasz8" column="locasz8"/>
+        <result property="time" column="time"/>
+    </resultMap>
+
+
+</mapper>

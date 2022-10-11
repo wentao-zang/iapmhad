@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.yhpostureadjust.dao.RxBasedisDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.yhpostureadjust.entity.RxBasedisEntity" id="rxBasedisMap">
+        <result property="id" column="id"/>
+        <result property="aircraftId" column="aircraft_id"/>
+        <result property="flightId" column="flight_id"/>
+        <result property="fixtureId" column="fixture_id"/>
+        <result property="basex1" column="basex1"/>
+        <result property="basez1" column="basez1"/>
+        <result property="basex2" column="basex2"/>
+        <result property="basez2" column="basez2"/>
+        <result property="basex3" column="basex3"/>
+        <result property="basez3" column="basez3"/>
+        <result property="basex4" column="basex4"/>
+        <result property="basez4" column="basez4"/>
+        <result property="basex5" column="basex5"/>
+        <result property="basez5" column="basez5"/>
+        <result property="basesqux" column="basesqux"/>
+        <result property="basesquz" column="basesquz"/>
+    </resultMap>
+
+
+</mapper>

@@ -34,7 +34,7 @@ public class DkSpecificationController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:dkspecification:list")
+    ////@RequiresPermissions("hdymzkjqrxt:dkspecification:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = dkSpecificationService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class DkSpecificationController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:dkspecification:info")
+    ////@RequiresPermissions("hdymzkjqrxt:dkspecification:info")
     public R info(@PathVariable("id") Integer id){
 		DkSpecificationEntity dkSpecification = dkSpecificationService.getById(id);
 
@@ -77,7 +77,7 @@ public class DkSpecificationController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:dkspecification:save")
+    ////@RequiresPermissions("hdymzkjqrxt:dkspecification:save")
     public R save(@RequestBody DkSpecificationEntity dkSpecification){
 		dkSpecificationService.save(dkSpecification);
 
@@ -88,7 +88,7 @@ public class DkSpecificationController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:dkspecification:update")
+    ////@RequiresPermissions("hdymzkjqrxt:dkspecification:update")
     public R update(@RequestBody DkSpecificationEntity dkSpecification){
 		dkSpecificationService.updateById(dkSpecification);
 
@@ -99,7 +99,7 @@ public class DkSpecificationController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:dkspecification:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:dkspecification:delete")
     public R delete(@RequestBody Integer[] ids){
 		dkSpecificationService.removeByIds(Arrays.asList(ids));
 

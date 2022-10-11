@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.yhmachinedrilling.dao.AxisinfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.yhmachinedrilling.entity.AxisinfoEntity" id="axisinfoMap">
+        <result property="id" column="ID"/>
+        <result property="vel1" column="VEL1"/>
+        <result property="vel2" column="VEL2"/>
+        <result property="vel3" column="VEL3"/>
+        <result property="vel4" column="VEL4"/>
+        <result property="x1" column="X1"/>
+        <result property="x2" column="X2"/>
+        <result property="x3" column="X3"/>
+        <result property="x4" column="X4"/>
+        <result property="temp1" column="TEMP1"/>
+        <result property="temp2" column="TEMP2"/>
+        <result property="temp3" column="TEMP3"/>
+        <result property="temp4" column="TEMP4"/>
+        <result property="power1" column="POWER1"/>
+        <result property="power2" column="POWER2"/>
+        <result property="power3" column="POWER3"/>
+        <result property="power4" column="POWER4"/>
+        <result property="current1" column="CURRENT1"/>
+        <result property="current2" column="CURRENT2"/>
+        <result property="current3" column="CURRENT3"/>
+        <result property="current4" column="CURRENT4"/>
+        <result property="time" column="TIME"/>
+    </resultMap>
+
+
+</mapper>

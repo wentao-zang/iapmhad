@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.PosinfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.PosinfoEntity" id="posinfoMap">
+        <result property="id" column="ID"/>
+        <result property="x" column="X"/>
+        <result property="y" column="Y"/>
+        <result property="z" column="Z"/>
+        <result property="a" column="A"/>
+        <result property="b" column="B"/>
+        <result property="c" column="C"/>
+        <result property="x1" column="X1"/>
+        <result property="x11" column="X11"/>
+        <result property="z11" column="Z11"/>
+        <result property="v2" column="V2"/>
+        <result property="v3" column="V3"/>
+        <result property="a1" column="A1"/>
+        <result property="a2" column="A2"/>
+        <result property="a3" column="A3"/>
+        <result property="a4" column="A4"/>
+        <result property="a5" column="A5"/>
+        <result property="a6" column="A6"/>
+        <result property="ac1" column="AC1"/>
+        <result property="ac2" column="AC2"/>
+        <result property="ac3" column="AC3"/>
+        <result property="ac4" column="AC4"/>
+        <result property="ac5" column="AC5"/>
+        <result property="ac6" column="AC6"/>
+        <result property="current1" column="CURRENT1"/>
+        <result property="current2" column="CURRENT2"/>
+        <result property="current3" column="CURRENT3"/>
+        <result property="current4" column="CURRENT4"/>
+        <result property="current5" column="CURRENT5"/>
+        <result property="current6" column="CURRENT6"/>
+        <result property="torque1" column="TORQUE1"/>
+        <result property="torque2" column="TORQUE2"/>
+        <result property="torque3" column="TORQUE3"/>
+        <result property="torque4" column="TORQUE4"/>
+        <result property="torque5" column="TORQUE5"/>
+        <result property="torque6" column="TORQUE6"/>
+        <result property="power1" column="POWER1"/>
+        <result property="power2" column="POWER2"/>
+        <result property="power3" column="POWER3"/>
+        <result property="power4" column="POWER4"/>
+        <result property="power5" column="POWER5"/>
+        <result property="power6" column="POWER6"/>
+        <result property="temp1" column="TEMP1"/>
+        <result property="temp2" column="TEMP2"/>
+        <result property="temp3" column="TEMP3"/>
+        <result property="temp4" column="TEMP4"/>
+        <result property="temp5" column="TEMP5"/>
+        <result property="temp6" column="TEMP6"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.PosinfoEntity">
+        SELECT * FROM posinfo WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.PosinfoEntity">
+        SELECT * FROM posinfo  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

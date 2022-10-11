@@ -34,7 +34,7 @@ public class TrycutinfoController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:trycutinfo:list")
+    ////@RequiresPermissions("hdymzkjqrxt:trycutinfo:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = trycutinfoService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class TrycutinfoController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:trycutinfo:info")
+    ////@RequiresPermissions("hdymzkjqrxt:trycutinfo:info")
     public R info(@PathVariable("id") Integer id){
 		TrycutinfoEntity trycutinfo = trycutinfoService.getById(id);
 
@@ -77,7 +77,7 @@ public class TrycutinfoController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:trycutinfo:save")
+    ////@RequiresPermissions("hdymzkjqrxt:trycutinfo:save")
     public R save(@RequestBody TrycutinfoEntity trycutinfo){
 		trycutinfoService.save(trycutinfo);
 
@@ -88,7 +88,7 @@ public class TrycutinfoController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:trycutinfo:update")
+    ////@RequiresPermissions("hdymzkjqrxt:trycutinfo:update")
     public R update(@RequestBody TrycutinfoEntity trycutinfo){
 		trycutinfoService.updateById(trycutinfo);
 
@@ -99,7 +99,7 @@ public class TrycutinfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:trycutinfo:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:trycutinfo:delete")
     public R delete(@RequestBody Integer[] ids){
 		trycutinfoService.removeByIds(Arrays.asList(ids));
 

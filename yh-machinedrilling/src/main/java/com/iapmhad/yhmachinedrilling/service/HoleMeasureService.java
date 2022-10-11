@@ -1,0 +1,20 @@
+package com.iapmhad.yhmachinedrilling.service;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.iapmhad.common.utils.PageUtils;
+import com.iapmhad.yhmachinedrilling.entity.HoleMeasureEntity;
+
+import java.util.Map;
+
+/**
+ * 
+ *
+ * @author wtzang
+ * @email w_t_zang1016@163.com
+ * @date 2022-10-11 15:15:34
+ */
+public interface HoleMeasureService extends IService<HoleMeasureEntity> {
+
+    PageUtils queryPage(Map<String, Object> params);
+}
+

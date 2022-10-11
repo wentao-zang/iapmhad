@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.FootpressinfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.FootpressinfoEntity" id="footpressinfoMap">
+        <result property="id" column="ID"/>
+        <result property="footpress" column="FootPress"/>
+        <result property="footout" column="FootOut"/>
+        <result property="footlength" column="FootLength"/>
+        <result property="normalbeta" column="NormalBeta"/>
+        <result property="normaltheata" column="NormalTheata"/>
+        <result property="normalgamma" column="NormalGamma"/>
+        <result property="normal1" column="Normal1"/>
+        <result property="normal2" column="Normal2"/>
+        <result property="normal3" column="Normal3"/>
+        <result property="normal4" column="Normal4"/>
+        <result property="time" column="Time"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.FootpressinfoEntity">
+        SELECT * FROM footpressinfo WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.FootpressinfoEntity">
+        SELECT * FROM footpressinfo  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

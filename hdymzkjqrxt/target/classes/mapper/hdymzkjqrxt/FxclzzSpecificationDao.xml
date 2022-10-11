@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.FxclzzSpecificationDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.FxclzzSpecificationEntity" id="fxclzzSpecificationMap">
+        <result property="id" column="ID"/>
+        <result property="deviceId" column="DEVICE_ID"/>
+        <result property="deviceCode" column="DEVICE_CODE"/>
+        <result property="deviceName" column="DEVICE_NAME"/>
+        <result property="sensorCode" column="SENSOR_CODE"/>
+        <result property="sensorManufacturer" column="SENSOR_MANUFACTURER"/>
+        <result property="sensorNum" column="SENSOR_NUM"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.FxclzzSpecificationEntity">
+        SELECT * FROM fxclzz_specification WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.FxclzzSpecificationEntity">
+        SELECT * FROM fxclzz_specification  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

@@ -34,7 +34,7 @@ public class GyProcessController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:gyprocess:list")
+    ////@RequiresPermissions("hdymzkjqrxt:gyprocess:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = gyProcessService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class GyProcessController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:gyprocess:info")
+    ////@RequiresPermissions("hdymzkjqrxt:gyprocess:info")
     public R info(@PathVariable("id") Integer id){
 		GyProcessEntity gyProcess = gyProcessService.getById(id);
 
@@ -77,7 +77,7 @@ public class GyProcessController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:gyprocess:save")
+    ////@RequiresPermissions("hdymzkjqrxt:gyprocess:save")
     public R save(@RequestBody GyProcessEntity gyProcess){
 		gyProcessService.save(gyProcess);
 
@@ -88,7 +88,7 @@ public class GyProcessController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:gyprocess:update")
+    ////@RequiresPermissions("hdymzkjqrxt:gyprocess:update")
     public R update(@RequestBody GyProcessEntity gyProcess){
 		gyProcessService.updateById(gyProcess);
 
@@ -99,7 +99,7 @@ public class GyProcessController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:gyprocess:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:gyprocess:delete")
     public R delete(@RequestBody Integer[] ids){
 		gyProcessService.removeByIds(Arrays.asList(ids));
 

@@ -34,7 +34,7 @@ public class FootpressinfoController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:footpressinfo:list")
+    ////@RequiresPermissions("hdymzkjqrxt:footpressinfo:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = footpressinfoService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class FootpressinfoController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:footpressinfo:info")
+    ////@RequiresPermissions("hdymzkjqrxt:footpressinfo:info")
     public R info(@PathVariable("id") Integer id){
 		FootpressinfoEntity footpressinfo = footpressinfoService.getById(id);
 
@@ -77,7 +77,7 @@ public class FootpressinfoController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:footpressinfo:save")
+    ////@RequiresPermissions("hdymzkjqrxt:footpressinfo:save")
     public R save(@RequestBody FootpressinfoEntity footpressinfo){
 		footpressinfoService.save(footpressinfo);
 
@@ -88,7 +88,7 @@ public class FootpressinfoController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:footpressinfo:update")
+    ////@RequiresPermissions("hdymzkjqrxt:footpressinfo:update")
     public R update(@RequestBody FootpressinfoEntity footpressinfo){
 		footpressinfoService.updateById(footpressinfo);
 
@@ -99,7 +99,7 @@ public class FootpressinfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:footpressinfo:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:footpressinfo:delete")
     public R delete(@RequestBody Integer[] ids){
 		footpressinfoService.removeByIds(Arrays.asList(ids));
 

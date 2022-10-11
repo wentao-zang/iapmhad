@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.ProductinfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.ProductinfoEntity" id="productinfoMap">
+        <result property="id" column="ID"/>
+        <result property="aircraftId" column="AIRCRAFT_ID"/>
+        <result property="flightId" column="FLIGHT_ID"/>
+        <result property="productName" column="PRODUCT_NAME"/>
+        <result property="productNum" column="PRODUCT_NUM"/>
+        <result property="taskId" column="TASK_ID"/>
+        <result property="toolId" column="TOOL_ID"/>
+        <result property="holeId" column="HOLE_ID"/>
+        <result property="processNum" column="PROCESS_NUM"/>
+        <result property="totalNum" column="TOTAL_NUM"/>
+        <result property="time" column="TIME"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.ProductinfoEntity">
+        SELECT * FROM productinfo WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.ProductinfoEntity">
+        SELECT * FROM productinfo  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>

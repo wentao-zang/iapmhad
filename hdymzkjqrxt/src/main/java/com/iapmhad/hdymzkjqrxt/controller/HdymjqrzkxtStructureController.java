@@ -34,7 +34,7 @@ public class HdymjqrzkxtStructureController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:hdymjqrzkxtstructure:list")
+    ////@RequiresPermissions("hdymzkjqrxt:hdymjqrzkxtstructure:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = hdymjqrzkxtStructureService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class HdymjqrzkxtStructureController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:hdymjqrzkxtstructure:info")
+    ////@RequiresPermissions("hdymzkjqrxt:hdymjqrzkxtstructure:info")
     public R info(@PathVariable("id") Integer id){
 		HdymjqrzkxtStructureEntity hdymjqrzkxtStructure = hdymjqrzkxtStructureService.getById(id);
 
@@ -77,7 +77,7 @@ public class HdymjqrzkxtStructureController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:hdymjqrzkxtstructure:save")
+    ////@RequiresPermissions("hdymzkjqrxt:hdymjqrzkxtstructure:save")
     public R save(@RequestBody HdymjqrzkxtStructureEntity hdymjqrzkxtStructure){
 		hdymjqrzkxtStructureService.save(hdymjqrzkxtStructure);
 
@@ -88,7 +88,7 @@ public class HdymjqrzkxtStructureController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:hdymjqrzkxtstructure:update")
+    ////@RequiresPermissions("hdymzkjqrxt:hdymjqrzkxtstructure:update")
     public R update(@RequestBody HdymjqrzkxtStructureEntity hdymjqrzkxtStructure){
 		hdymjqrzkxtStructureService.updateById(hdymjqrzkxtStructure);
 
@@ -99,7 +99,7 @@ public class HdymjqrzkxtStructureController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:hdymjqrzkxtstructure:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:hdymjqrzkxtstructure:delete")
     public R delete(@RequestBody Integer[] ids){
 		hdymjqrzkxtStructureService.removeByIds(Arrays.asList(ids));
 

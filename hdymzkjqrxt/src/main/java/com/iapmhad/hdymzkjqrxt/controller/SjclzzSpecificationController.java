@@ -34,7 +34,7 @@ public class SjclzzSpecificationController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:sjclzzspecification:list")
+    ////@RequiresPermissions("hdymzkjqrxt:sjclzzspecification:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = sjclzzSpecificationService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class SjclzzSpecificationController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:sjclzzspecification:info")
+    ////@RequiresPermissions("hdymzkjqrxt:sjclzzspecification:info")
     public R info(@PathVariable("id") Integer id){
 		SjclzzSpecificationEntity sjclzzSpecification = sjclzzSpecificationService.getById(id);
 
@@ -77,7 +77,7 @@ public class SjclzzSpecificationController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:sjclzzspecification:save")
+    ////@RequiresPermissions("hdymzkjqrxt:sjclzzspecification:save")
     public R save(@RequestBody SjclzzSpecificationEntity sjclzzSpecification){
 		sjclzzSpecificationService.save(sjclzzSpecification);
 
@@ -88,7 +88,7 @@ public class SjclzzSpecificationController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:sjclzzspecification:update")
+    ////@RequiresPermissions("hdymzkjqrxt:sjclzzspecification:update")
     public R update(@RequestBody SjclzzSpecificationEntity sjclzzSpecification){
 		sjclzzSpecificationService.updateById(sjclzzSpecification);
 
@@ -99,7 +99,7 @@ public class SjclzzSpecificationController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:sjclzzspecification:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:sjclzzspecification:delete")
     public R delete(@RequestBody Integer[] ids){
 		sjclzzSpecificationService.removeByIds(Arrays.asList(ids));
 

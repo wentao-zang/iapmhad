@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.processParametersJqrzk.dao.FastenHoleProcessDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.processParametersJqrzk.entity.FastenHoleProcessEntity" id="fastenHoleProcessMap">
+        <result property="id" column="ID"/>
+        <result property="aperture" column="APERTURE"/>
+        <result property="fastenType" column="FASTEN_TYPE"/>
+        <result property="prefastenDode" column="PREFASTEN_DODE"/>
+        <result property="toolId" column="TOOL_ID"/>
+        <result property="holeDepth" column="HOLE_DEPTH"/>
+        <result property="dimpleDepth" column="DIMPLE_DEPTH"/>
+        <result property="holeDepthMax" column="HOLE_DEPTH_MAX"/>
+        <result property="holeDepthMin" column="HOLE_DEPTH_MIN"/>
+        <result property="shaftRotaion" column="SHAFT_ROTAION"/>
+        <result property="shaftFeedRate" column="SHAFT_FEED_RATE"/>
+        <result property="dimpleRotation" column="DIMPLE_ROTATION"/>
+        <result property="dimpleFeedRate" column="DIMPLE_FEED_RATE"/>
+        <result property="presserForce" column="PRESSER_FORCE"/>
+        <result property="rapidFeedRate" column="RAPID_FEED_RATE"/>
+        <result property="startPos" column="START_POS"/>
+        <result property="insertSpeed" column="INSERT_SPEED"/>
+        <result property="torque" column="TORQUE"/>
+    </resultMap>
+
+
+</mapper>

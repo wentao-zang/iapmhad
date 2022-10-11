@@ -34,7 +34,7 @@ public class XtLogController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("hdymzkjqrxt:xtlog:list")
+    ////@RequiresPermissions("hdymzkjqrxt:xtlog:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = xtLogService.queryPage(params);
 
@@ -66,7 +66,7 @@ public class XtLogController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("hdymzkjqrxt:xtlog:info")
+    ////@RequiresPermissions("hdymzkjqrxt:xtlog:info")
     public R info(@PathVariable("id") Integer id){
 		XtLogEntity xtLog = xtLogService.getById(id);
 
@@ -77,7 +77,7 @@ public class XtLogController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("hdymzkjqrxt:xtlog:save")
+    ////@RequiresPermissions("hdymzkjqrxt:xtlog:save")
     public R save(@RequestBody XtLogEntity xtLog){
 		xtLogService.save(xtLog);
 
@@ -88,7 +88,7 @@ public class XtLogController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("hdymzkjqrxt:xtlog:update")
+    ////@RequiresPermissions("hdymzkjqrxt:xtlog:update")
     public R update(@RequestBody XtLogEntity xtLog){
 		xtLogService.updateById(xtLog);
 
@@ -99,7 +99,7 @@ public class XtLogController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("hdymzkjqrxt:xtlog:delete")
+    ////@RequiresPermissions("hdymzkjqrxt:xtlog:delete")
     public R delete(@RequestBody Integer[] ids){
 		xtLogService.removeByIds(Arrays.asList(ids));
 

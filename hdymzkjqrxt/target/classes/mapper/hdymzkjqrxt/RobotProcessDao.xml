@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.hdymzkjqrxt.dao.RobotProcessDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.hdymzkjqrxt.entity.RobotProcessEntity" id="robotProcessMap">
+        <result property="id" column="ID"/>
+        <result property="holeId" column="HOLE_ID"/>
+        <result property="productPosX" column="PRODUCT_POS_X"/>
+        <result property="productPosY" column="PRODUCT_POS_Y"/>
+        <result property="productPosZ" column="PRODUCT_POS_Z"/>
+        <result property="productYaw" column="PRODUCT_YAW"/>
+        <result property="productPitch" column="PRODUCT_PITCH"/>
+        <result property="productRoll" column="PRODUCT_ROLL"/>
+        <result property="productBaseX" column="PRODUCT_BASE_X"/>
+        <result property="productBaseY" column="PRODUCT_BASE_Y"/>
+        <result property="productBaseZ" column="PRODUCT_BASE_Z"/>
+        <result property="productBaseYaw" column="PRODUCT_BASE_YAW"/>
+        <result property="productBasePitch" column="PRODUCT_BASE_PITCH"/>
+        <result property="productBaseRoll" column="PRODUCT_BASE_ROLL"/>
+        <result property="toolPosX" column="TOOL_POS_X"/>
+        <result property="toolPosY" column="TOOL_POS_Y"/>
+        <result property="toolPosZ" column="TOOL_POS_Z"/>
+        <result property="toolYaw" column="TOOL_YAW"/>
+        <result property="toolPitch" column="TOOL_PITCH"/>
+        <result property="toolRoll" column="TOOL_ROLL"/>
+        <result property="ptpSpeed" column="PTP_SPEED"/>
+        <result property="ptpAcceleration" column="PTP_ACCELERATION"/>
+        <result property="speed" column="SPEED"/>
+        <result property="acceleration" column="ACCELERATION"/>
+        <result property="a1" column="A1"/>
+        <result property="a2" column="A2"/>
+        <result property="a3" column="A3"/>
+        <result property="a4" column="A4"/>
+        <result property="a5" column="A5"/>
+        <result property="a6" column="A6"/>
+        <result property="motionCode" column="MOTION_CODE"/>
+    </resultMap>
+
+    <select id="getLi" resultType="com.iapmhad.hdymzkjqrxt.entity.RobotProcessEntity">
+        SELECT * FROM robot_process WHERE id>#{id}
+    </select>
+    <select id="getLast" resultType="com.iapmhad.hdymzkjqrxt.entity.RobotProcessEntity">
+        SELECT * FROM robot_process  ORDER BY id DESC LIMIT 0,1
+    </select>
+
+</mapper>
