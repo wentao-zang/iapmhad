@@ -1,6 +1,7 @@
 package com.iapmhad.yhpostureadjust.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -30,6 +31,16 @@ import com.iapmhad.common.utils.R;
 public class LsLocadis1Controller {
     @Autowired
     private LsLocadis1Service lsLocadis1Service;
+
+    @RequestMapping("/getlast/{id}")
+    public LsLocadis1Entity getlast(@PathVariable("id") Integer id){
+        List<LsLocadis1Entity> last = lsLocadis1Service.getLi(id);
+        if(last.size()!=0){
+            LsLocadis1Entity last1 = last.get(last.size() - 1);
+            return last1;
+        }
+        return null;
+    }
 
     /**
      * 列表

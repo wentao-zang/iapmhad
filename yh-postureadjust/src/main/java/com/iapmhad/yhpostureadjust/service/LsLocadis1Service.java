@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.iapmhad.common.utils.PageUtils;
 import com.iapmhad.yhpostureadjust.entity.LsLocadis1Entity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -14,7 +15,7 @@ import java.util.Map;
  * @date 2022-10-11 15:11:17
  */
 public interface LsLocadis1Service extends IService<LsLocadis1Entity> {
-
+    List<LsLocadis1Entity> getLi(int id);
     PageUtils queryPage(Map<String, Object> params);
 }
 
