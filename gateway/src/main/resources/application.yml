@@ -49,3 +49,17 @@ spring:
             - Path=/amehdym/**
           filters:
             - RewritePath=/amehdym/(?<segment>.*),/ame_hdym/$\{segment}
+
+        - id: yh_machinedrilling_route
+          uri: lb://yhmachinedrilling
+          predicates:
+            - Path=/yhmh/**
+          filters:
+            - RewritePath=/yhmh/(?<segment>.*),/yhmachinedrilling/$\{segment}
+
+        - id: yh_postureadjust_route
+          uri: lb://yhpostureadjust
+          predicates:
+            - Path=/yhpa/**
+          filters:
+            - RewritePath=/yhpa/(?<segment>.*),/yhpostureadjust/$\{segment}
