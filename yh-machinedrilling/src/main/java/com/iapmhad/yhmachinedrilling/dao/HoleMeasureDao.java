@@ -1,8 +1,11 @@
 package com.iapmhad.yhmachinedrilling.dao;
 
+import com.iapmhad.yhmachinedrilling.entity.AxisinfoEntity;
 import com.iapmhad.yhmachinedrilling.entity.HoleMeasureEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * 
@@ -13,5 +16,5 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface HoleMeasureDao extends BaseMapper<HoleMeasureEntity> {
-	
+    List<HoleMeasureEntity> getLi(int id);
 }

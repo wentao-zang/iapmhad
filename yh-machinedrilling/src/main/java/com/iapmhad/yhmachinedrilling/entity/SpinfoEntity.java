@@ -61,4 +61,6 @@ public class SpinfoEntity implements Serializable {
 	 */
 	private Double posz;
 
+	private Date time;
+
 }

@@ -1,6 +1,10 @@
 package com.iapmhad.yhmachinedrilling.service.impl;
 
+import com.iapmhad.yhmachinedrilling.entity.ProductinfoEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -15,6 +19,15 @@ import com.iapmhad.yhmachinedrilling.service.AxisinfoService;
 
 @Service("axisinfoService")
 public class AxisinfoServiceImpl extends ServiceImpl<AxisinfoDao, AxisinfoEntity> implements AxisinfoService {
+
+    @Autowired
+    AxisinfoDao axisinfoDao;
+
+    @Override
+    public List<AxisinfoEntity> getLi(int id) {
+        List<AxisinfoEntity> last = axisinfoDao.getLi(id);
+        return last;
+    }
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {

@@ -23,6 +23,8 @@
         <result property="locasz8" column="locasz8"/>
         <result property="time" column="time"/>
     </resultMap>
-
+    <select id="getLi" resultType="com.iapmhad.yhpostureadjust.entity.RsLocastan2Entity">
+        SELECT * FROM rs_locastan2 WHERE id>#{id}
+    </select>
 
 </mapper>

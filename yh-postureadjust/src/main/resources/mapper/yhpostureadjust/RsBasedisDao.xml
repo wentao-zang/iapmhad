@@ -22,6 +22,8 @@
         <result property="basesqux" column="basesqux"/>
         <result property="basesquz" column="basesquz"/>
     </resultMap>
-
+    <select id="getLi" resultType="com.iapmhad.yhpostureadjust.entity.RsBasedisEntity">
+        SELECT * FROM rs_basedis WHERE id>#{id}
+    </select>
 
 </mapper>

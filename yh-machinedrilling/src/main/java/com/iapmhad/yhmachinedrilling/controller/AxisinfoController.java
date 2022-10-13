@@ -1,9 +1,11 @@
 package com.iapmhad.yhmachinedrilling.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.iapmhad.yhmachinedrilling.entity.ProductinfoEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,6 +36,26 @@ public class AxisinfoController {
     /**
      * 列表
      */
+    @RequestMapping("/getli/{id}")
+    public List<AxisinfoEntity> getLi(@PathVariable("id") Integer id){
+        List<AxisinfoEntity> list = axisinfoService.getLi(id);
+        if(list.size()>300) {
+            list = list.subList(list.size() - 300,list.size());
+        }
+//        list.forEach(System.out::println);
+        return list;
+    }
+
+    @RequestMapping("/getlast/{id}")
+    public AxisinfoEntity getlast(@PathVariable("id") Integer id){
+        List<AxisinfoEntity> last = axisinfoService.getLi(id);
+        if(last.size()!=0){
+            AxisinfoEntity last1 = last.get(last.size() - 1);
+            return last1;
+        }
+        return null;
+    }
+
     @RequestMapping("/list")
     //@RequiresPermissions("yhmachinedrilling:axisinfo:list")
     public R list(@RequestParam Map<String, Object> params){

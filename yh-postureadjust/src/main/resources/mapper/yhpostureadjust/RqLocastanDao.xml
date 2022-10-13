@@ -24,6 +24,8 @@
         <result property="locapsz2" column="locapsz2"/>
         <result property="time" column="time"/>
     </resultMap>
-
+    <select id="getLi" resultType="com.iapmhad.yhpostureadjust.entity.RqLocastanEntity">
+        SELECT * FROM rq_locastan WHERE id>#{id}
+    </select>
 
 </mapper>

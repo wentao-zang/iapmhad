@@ -16,6 +16,8 @@
         <result property="holeDia" column="hole_dia"/>
         <result property="time" column="time"/>
     </resultMap>
-
+    <select id="getLi" resultType="com.iapmhad.yhmachinedrilling.entity.HoleMeasureEntity">
+        SELECT * FROM hole_measure WHERE id>#{id}
+    </select>
 
 </mapper>

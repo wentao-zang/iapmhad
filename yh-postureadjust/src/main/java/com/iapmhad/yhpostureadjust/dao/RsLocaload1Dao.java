@@ -1,8 +1,11 @@
 package com.iapmhad.yhpostureadjust.dao;
 
+import com.iapmhad.yhpostureadjust.entity.LsLocadis1Entity;
 import com.iapmhad.yhpostureadjust.entity.RsLocaload1Entity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * 
@@ -13,5 +16,5 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface RsLocaload1Dao extends BaseMapper<RsLocaload1Entity> {
-	
+    List<RsLocaload1Entity> getLi(int id);
 }
