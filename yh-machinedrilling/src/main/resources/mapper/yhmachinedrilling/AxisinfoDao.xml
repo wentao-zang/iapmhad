@@ -28,6 +28,8 @@
         <result property="current4" column="CURRENT4"/>
         <result property="time" column="TIME"/>
     </resultMap>
-
+    <select id="getLi" resultType="com.iapmhad.yhmachinedrilling.entity.AxisinfoEntity">
+        SELECT * FROM axisinfo WHERE id>#{id}
+    </select>
 
 </mapper>

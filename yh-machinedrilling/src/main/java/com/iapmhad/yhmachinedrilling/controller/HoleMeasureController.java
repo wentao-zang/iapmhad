@@ -1,9 +1,11 @@
 package com.iapmhad.yhmachinedrilling.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.iapmhad.yhmachinedrilling.entity.AxisinfoEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,6 +32,16 @@ import com.iapmhad.common.utils.R;
 public class HoleMeasureController {
     @Autowired
     private HoleMeasureService holeMeasureService;
+
+    @RequestMapping("/getli/{id}")
+    public List<HoleMeasureEntity> getLi(@PathVariable("id") Integer id){
+        List<HoleMeasureEntity> list = holeMeasureService.getLi(id);
+        if(list.size()>300) {
+            list = list.subList(list.size() - 300,list.size());
+        }
+//        list.forEach(System.out::println);
+        return list;
+    }
 
     /**
      * 列表

@@ -18,6 +18,8 @@
         <result property="holedia" column="HOLEDIA"/>
         <result property="time" column="TIME"/>
     </resultMap>
-
+    <select id="getLi" resultType="com.iapmhad.yhmachinedrilling.entity.ProductinfoEntity">
+        SELECT * FROM productinfo WHERE id>#{id}
+    </select>
 
 </mapper>

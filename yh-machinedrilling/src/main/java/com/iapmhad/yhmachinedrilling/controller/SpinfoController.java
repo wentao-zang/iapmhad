@@ -1,9 +1,11 @@
 package com.iapmhad.yhmachinedrilling.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.iapmhad.yhmachinedrilling.entity.AxisinfoEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,6 +36,16 @@ public class SpinfoController {
     /**
      * 列表
      */
+    @RequestMapping("/getli/{id}")
+    public List<SpinfoEntity> getLi(@PathVariable("id") Integer id){
+        List<SpinfoEntity> list = spinfoService.getLi(id);
+        if(list.size()>300) {
+            list = list.subList(list.size() - 300,list.size());
+        }
+//        list.forEach(System.out::println);
+        return list;
+    }
+
     @RequestMapping("/list")
     //@RequiresPermissions("yhmachinedrilling:spinfo:list")
     public R list(@RequestParam Map<String, Object> params){

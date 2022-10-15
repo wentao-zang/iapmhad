@@ -30,8 +30,8 @@ public class AxisinfoController {
     @RequestMapping("/getli/{id}")
     public List<AxisinfoEntity> getLi(@PathVariable("id") Integer id){
         List<AxisinfoEntity> list = axisinfoService.getLi(id);
-        if(list.size()>300) {
-            list = list.subList(list.size() - 300,list.size());
+        if(list.size()>100) {
+            list = list.subList(list.size() - 100,list.size());
         }
 //        list.forEach(System.out::println);
         return list;

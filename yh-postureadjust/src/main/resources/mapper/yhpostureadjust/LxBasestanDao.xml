@@ -22,6 +22,8 @@
         <result property="basesqusx" column="basesqusx"/>
         <result property="basesqusz" column="basesqusz"/>
     </resultMap>
-
+    <select id="getLi" resultType="com.iapmhad.yhpostureadjust.entity.LxBasestanEntity">
+        SELECT * FROM lx_basestan WHERE id>#{id}
+    </select>
 
 </mapper>

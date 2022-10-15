@@ -15,7 +15,10 @@
         <result property="posx" column="POSX"/>
         <result property="posy" column="POSY"/>
         <result property="posz" column="POSZ"/>
+        <result property="time" column="time"/>
     </resultMap>
-
+    <select id="getLi" resultType="com.iapmhad.yhmachinedrilling.entity.SpinfoEntity">
+        SELECT * FROM spinfo WHERE id>#{id}
+    </select>
 
 </mapper>

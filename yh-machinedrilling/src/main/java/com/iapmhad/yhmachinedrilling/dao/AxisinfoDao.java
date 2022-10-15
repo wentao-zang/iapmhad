@@ -2,7 +2,10 @@ package com.iapmhad.yhmachinedrilling.dao;
 
 import com.iapmhad.yhmachinedrilling.entity.AxisinfoEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.iapmhad.yhmachinedrilling.entity.ProductinfoEntity;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * 
@@ -13,5 +16,6 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface AxisinfoDao extends BaseMapper<AxisinfoEntity> {
+    List<AxisinfoEntity> getLi(int id);
 	
 }

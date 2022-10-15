@@ -2,31 +2,32 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="data-migration-client" />
-        <module name="renren-generator" />
+        <module name="ame_hdym" />
         <module name="common" />
         <module name="yh-postureadjust" />
         <module name="hdymzkjqrxt" />
         <module name="gateway" />
-        <module name="ame_hdym" />
         <module name="yh-machinedrilling" />
         <module name="member" />
+        <module name="renren-generator" />
         <module name="process-parameters-jqrzk" />
         <module name="data-migration-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ame_hdym" target="1.8" />
-      <module name="common" target="8" />
+      <module name="common" target="1.8" />
       <module name="data-migration-client" target="1.8" />
       <module name="data-migration-service" target="1.8" />
       <module name="gateway" target="1.8" />
       <module name="hdymzkjqrxt" target="1.8" />
-      <module name="iapmhad" target="1.5" />
+      <module name="iapmhad" target="1.8" />
       <module name="member" target="1.8" />
       <module name="process-parameters-jqrzk" target="1.8" />
       <module name="renren-generator" target="1.8" />

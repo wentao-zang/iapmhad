@@ -23,6 +23,8 @@
         <result property="loadz8" column="loadz8"/>
         <result property="time" column="time"/>
     </resultMap>
-
+    <select id="getLi" resultType="com.iapmhad.yhpostureadjust.entity.RsLocaload2Entity">
+        SELECT * FROM rs_locaload2 WHERE id>#{id}
+    </select>
 
 </mapper>
