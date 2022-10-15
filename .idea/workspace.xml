@@ -138,16 +138,6 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
@@ -172,6 +162,12 @@
       <workItem from="1665472905711" duration="941000" />
       <workItem from="1665473876007" duration="1153000" />
       <workItem from="1665479565528" duration="6248000" />
+      <workItem from="1665581555687" duration="2647000" />
+      <workItem from="1665818992795" duration="640000" />
+      <workItem from="1665821121314" duration="208000" />
+      <workItem from="1665821400393" duration="212000" />
+      <workItem from="1665821715529" duration="800000" />
+      <workItem from="1665823170828" duration="16000" />
     </task>
     <servers />
   </component>
