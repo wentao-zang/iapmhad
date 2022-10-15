@@ -1,6 +1,10 @@
 package com.iapmhad.yhpostureadjust.service.impl;
 
+import com.iapmhad.yhpostureadjust.entity.LsLocadis1Entity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -15,6 +19,15 @@ import com.iapmhad.yhpostureadjust.service.LsBasestanService;
 
 @Service("lsBasestanService")
 public class LsBasestanServiceImpl extends ServiceImpl<LsBasestanDao, LsBasestanEntity> implements LsBasestanService {
+
+    @Autowired
+    LsBasestanDao lsBasestanDao;
+
+    @Override
+    public List<LsBasestanEntity> getLi(int id) {
+        List<LsBasestanEntity> last = lsBasestanDao.getLi(id);
+        return last;
+    }
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
