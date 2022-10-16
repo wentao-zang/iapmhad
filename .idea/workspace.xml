@@ -118,6 +118,27 @@
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
+<<<<<<< HEAD
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+=======
     <option name="allServicesViewState">
       <serviceView>
         <option name="contentProportion" value="0.24931695" />
@@ -136,6 +157,7 @@
           <select />
         </treeState>
       </serviceView>
+>>>>>>> 22c01c1d12f6e1f1e8c38e9778fbfbbccd31811b
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -147,14 +169,32 @@
       <created>1665583663325</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
+      <updated>1665404098917</updated>
+      <workItem from="1665404107033" duration="44000" />
+      <workItem from="1665404192622" duration="2819000" />
+      <workItem from="1665472905711" duration="941000" />
+      <workItem from="1665473876007" duration="1153000" />
+      <workItem from="1665479565528" duration="6248000" />
+      <workItem from="1665581555687" duration="2647000" />
+      <workItem from="1665818992795" duration="640000" />
+      <workItem from="1665821121314" duration="208000" />
+      <workItem from="1665821400393" duration="212000" />
+      <workItem from="1665821715529" duration="800000" />
+      <workItem from="1665823170828" duration="16000" />
+=======
       <updated>1665583663325</updated>
       <workItem from="1665583667136" duration="3168000" />
       <workItem from="1665630203788" duration="2418000" />
       <workItem from="1665648819182" duration="10332000" />
+<<<<<<< HEAD
       <workItem from="1665672076632" duration="15000" />
       <workItem from="1665799233180" duration="5846000" />
       <workItem from="1665821801098" duration="2112000" />
       <workItem from="1665828507992" duration="7222000" />
+=======
+>>>>>>> 22c01c1d12f6e1f1e8c38e9778fbfbbccd31811b
+>>>>>>> e70f3dfb8bd71738eec62ab3c6258e448b8b2bda
     </task>
     <servers />
   </component>
