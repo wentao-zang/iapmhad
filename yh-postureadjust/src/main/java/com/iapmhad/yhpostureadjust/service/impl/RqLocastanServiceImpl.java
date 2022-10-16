@@ -1,6 +1,11 @@
 package com.iapmhad.yhpostureadjust.service.impl;
 
+import com.iapmhad.yhpostureadjust.dao.RqLocadisDao;
+import com.iapmhad.yhpostureadjust.entity.RqLocadisEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -15,6 +20,15 @@ import com.iapmhad.yhpostureadjust.service.RqLocastanService;
 
 @Service("rqLocastanService")
 public class RqLocastanServiceImpl extends ServiceImpl<RqLocastanDao, RqLocastanEntity> implements RqLocastanService {
+
+    @Autowired
+    RqLocastanDao rqLocastanDao;
+
+    @Override
+    public List<RqLocastanEntity> getLi(int id) {
+        List<RqLocastanEntity> last = rqLocastanDao.getLi(id);
+        return last;
+    }
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {

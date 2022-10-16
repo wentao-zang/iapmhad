@@ -1,6 +1,11 @@
 package com.iapmhad.yhpostureadjust.service.impl;
 
+import com.iapmhad.yhpostureadjust.dao.RsBasedisDao;
+import com.iapmhad.yhpostureadjust.entity.RsBasedisEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -15,6 +20,15 @@ import com.iapmhad.yhpostureadjust.service.RsBasestanService;
 
 @Service("rsBasestanService")
 public class RsBasestanServiceImpl extends ServiceImpl<RsBasestanDao, RsBasestanEntity> implements RsBasestanService {
+
+    @Autowired
+    RsBasestanDao rsBasestanDao;
+
+    @Override
+    public List<RsBasestanEntity> getLi(int id) {
+        List<RsBasestanEntity> last = rsBasestanDao.getLi(id);
+        return last;
+    }
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
