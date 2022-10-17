@@ -15,7 +15,7 @@ import lombok.Data;
  * @date 2022-10-11 15:15:34
  */
 @Data
-@TableName("holemeasure")
+@TableName("hole_measure")
 public class HoleMeasureEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
