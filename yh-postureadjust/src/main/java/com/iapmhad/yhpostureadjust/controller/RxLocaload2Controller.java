@@ -1,9 +1,11 @@
 package com.iapmhad.yhpostureadjust.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.iapmhad.yhpostureadjust.entity.RxLocaload1Entity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,6 +32,16 @@ import com.iapmhad.common.utils.R;
 public class RxLocaload2Controller {
     @Autowired
     private RxLocaload2Service rxLocaload2Service;
+
+    @RequestMapping("/getlast/{id}")
+    public RxLocaload2Entity getlast(@PathVariable("id") Integer id){
+        List<RxLocaload2Entity> last = rxLocaload2Service.getLi(id);
+        if(last.size()!=0){
+            RxLocaload2Entity last1 = last.get(last.size() - 1);
+            return last1;
+        }
+        return null;
+    }
 
     /**
      * 列表

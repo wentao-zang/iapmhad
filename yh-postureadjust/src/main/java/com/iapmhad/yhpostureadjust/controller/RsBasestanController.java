@@ -1,9 +1,11 @@
 package com.iapmhad.yhpostureadjust.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.iapmhad.yhpostureadjust.entity.RsBasedisEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,6 +32,16 @@ import com.iapmhad.common.utils.R;
 public class RsBasestanController {
     @Autowired
     private RsBasestanService rsBasestanService;
+
+    @RequestMapping("/getlast/{id}")
+    public RsBasestanEntity getlast(@PathVariable("id") Integer id){
+        List<RsBasestanEntity> last = rsBasestanService.getLi(id);
+        if(last.size()!=0){
+            RsBasestanEntity last1 = last.get(last.size() - 1);
+            return last1;
+        }
+        return null;
+    }
 
     /**
      * 列表

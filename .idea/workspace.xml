@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="26b24aaf-b942-4370-9a78-08cefab50a09" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
@@ -10,6 +11,9 @@
       <change beforePath="$PROJECT_DIR$/yh-machinedrilling/src/main/resources/mapper/yhmachinedrilling/HoleMeasureDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yh-machinedrilling/src/main/resources/mapper/yhmachinedrilling/HoleMeasureDao.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+=======
+    <list default="true" id="c599f42a-80a6-476e-9a42-a495185fc2fa" name="Default Changelist" comment="" />
+>>>>>>> ddd1844954c887e669b62d68a12974d9a3a72b32
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,22 +23,36 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="E:/jisuanjizhuanhang/Maven3.6.1/apache-maven-3.6.1-bin/apache-maven-3.6.1" />
-        <option name="userSettingsFile" value="E:\jisuanjizhuanhang\Maven3.6.1\apache-maven-3.6.1-bin\apache-maven-3.6.1\conf\settings.xml" />
-      </MavenGeneralSettings>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="ProjectId" id="2GF9UTSKTFoLQ81g01EeVc7nw8x" />
+=======
+  <component name="ProjectId" id="2GF9S19fNvfrm1aSMWtHG8lh2co" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+>>>>>>> ddd1844954c887e669b62d68a12974d9a3a72b32
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+>>>>>>> ddd1844954c887e669b62d68a12974d9a3a72b32
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -42,18 +60,12 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Spring Boot.ProcessParametersJqrzkApplication">
+=======
+  <component name="RunManager" selected="Spring Boot.YhPostureadjustApplication">
+>>>>>>> ddd1844954c887e669b62d68a12974d9a3a72b32
     <configuration name="AmeHdymApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="ame_hdym" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.iapmhad.ame_hdym.AmeHdymApplication" />
@@ -119,6 +131,7 @@
     </configuration>
   </component>
   <component name="ServiceViewManager">
+<<<<<<< HEAD
     <option name="allServicesViewState">
       <serviceView>
         <option name="contentProportion" value="0.2194617" />
@@ -137,6 +150,27 @@
           <select />
         </treeState>
       </serviceView>
+=======
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+>>>>>>> ddd1844954c887e669b62d68a12974d9a3a72b32
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -144,18 +178,28 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="26b24aaf-b942-4370-9a78-08cefab50a09" name="Default Changelist" comment="" />
       <created>1665973480989</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665973480989</updated>
       <workItem from="1665973484753" duration="4418000" />
+=======
+      <changelist id="c599f42a-80a6-476e-9a42-a495185fc2fa" name="Default Changelist" comment="" />
+      <created>1665973460721</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665973460721</updated>
+      <workItem from="1665973465204" duration="13312000" />
+>>>>>>> ddd1844954c887e669b62d68a12974d9a3a72b32
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -166,5 +210,48 @@
         </entry>
       </map>
     </option>
+=======
+  <component name="WindowStateProjectService">
+    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1665973522823">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="740" y="271" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1665973522823" />
+    <state width="1281" height="276" key="GridCell.Tab.0.bottom" timestamp="1666007947872">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1281" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1666007947872" />
+    <state width="1281" height="276" key="GridCell.Tab.0.center" timestamp="1666007947872">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1281" height="276" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1666007947872" />
+    <state width="1281" height="276" key="GridCell.Tab.0.left" timestamp="1666007947872">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1281" height="276" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1666007947872" />
+    <state width="1281" height="276" key="GridCell.Tab.0.right" timestamp="1666007947872">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1281" height="276" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1666007947872" />
+    <state width="1281" height="276" key="GridCell.Tab.1.bottom" timestamp="1666007947872">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1281" height="276" key="GridCell.Tab.1.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1666007947872" />
+    <state width="1281" height="276" key="GridCell.Tab.1.center" timestamp="1666007947872">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1281" height="276" key="GridCell.Tab.1.center/0.0.1920.1032@0.0.1920.1032" timestamp="1666007947872" />
+    <state width="1281" height="276" key="GridCell.Tab.1.left" timestamp="1666007947872">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1281" height="276" key="GridCell.Tab.1.left/0.0.1920.1032@0.0.1920.1032" timestamp="1666007947872" />
+    <state width="1281" height="276" key="GridCell.Tab.1.right" timestamp="1666007947872">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1281" height="276" key="GridCell.Tab.1.right/0.0.1920.1032@0.0.1920.1032" timestamp="1666007947872" />
+    <state x="461" y="158" key="SettingsEditor" timestamp="1666007723928">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="461" y="158" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1666007723928" />
+>>>>>>> ddd1844954c887e669b62d68a12974d9a3a72b32
   </component>
 </project>
