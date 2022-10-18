@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-<<<<<<< HEAD
-    <file url="file://$PROJECT_DIR$/ame_hdym" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/data-migration-client" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/data-migration-service" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gateway" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hdymzkjqrxt" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/member" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/process-parameters-jqrzk" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/renren-generator" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/yh-machinedrilling" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/yh-postureadjust" charset="UTF-8" />
-=======
     <file url="file://$PROJECT_DIR$/ame_hdym/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/data-migration-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/data-migration-service/src/main/java" charset="UTF-8" />
@@ -23,6 +11,5 @@
     <file url="file://$PROJECT_DIR$/renren-generator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yh-machinedrilling/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yh-postureadjust/src/main/java" charset="UTF-8" />
->>>>>>> ddd1844954c887e669b62d68a12974d9a3a72b32
   </component>
 </project>

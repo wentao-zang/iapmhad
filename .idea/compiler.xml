@@ -21,12 +21,12 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ame_hdym" target="1.8" />
-      <module name="common" target="1.8" />
+      <module name="common" target="8" />
       <module name="data-migration-client" target="1.8" />
       <module name="data-migration-service" target="1.8" />
       <module name="gateway" target="1.8" />
       <module name="hdymzkjqrxt" target="1.8" />
-      <module name="iapmhad" target="1.8" />
+      <module name="iapmhad" target="1.5" />
       <module name="member" target="1.8" />
       <module name="process-parameters-jqrzk" target="1.8" />
       <module name="renren-generator" target="1.8" />
