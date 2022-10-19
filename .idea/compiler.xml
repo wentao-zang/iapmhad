@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="jydbjdj" />
         <module name="data-migration-client" />
         <module name="renren-generator" />
         <module name="common" />
@@ -27,6 +28,7 @@
       <module name="gateway" target="1.8" />
       <module name="hdymzkjqrxt" target="1.8" />
       <module name="iapmhad" target="1.5" />
+      <module name="jydbjdj" target="1.8" />
       <module name="member" target="1.8" />
       <module name="process-parameters-jqrzk" target="1.8" />
       <module name="renren-generator" target="1.8" />
@@ -41,6 +43,7 @@
       <module name="data-migration-service" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="hdymzkjqrxt" options="-parameters" />
+      <module name="jydbjdj" options="-parameters" />
       <module name="member" options="-parameters" />
       <module name="process-parameters-jqrzk" options="-parameters" />
       <module name="renren-generator" options="-parameters" />

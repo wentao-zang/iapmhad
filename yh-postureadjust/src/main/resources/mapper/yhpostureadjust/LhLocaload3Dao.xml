@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.yhpostureadjust.dao.LhLocaload3Dao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.yhpostureadjust.entity.LhLocaload3Entity" id="lhLocaload3Map">
+        <result property="id" column="id"/>
+        <result property="aircraftId" column="aircraft_id"/>
+        <result property="flightId" column="flight_id"/>
+        <result property="fixtureId" column="fixture_id"/>
+        <result property="loadx9" column="loadx9"/>
+        <result property="loady9" column="loady9"/>
+        <result property="loadz9" column="loadz9"/>
+        <result property="loadx10" column="loadx10"/>
+        <result property="loady10" column="loady10"/>
+        <result property="loadz10" column="loadz10"/>
+        <result property="loadx11" column="loadx11"/>
+        <result property="loady11" column="loady11"/>
+        <result property="loadz11" column="loadz11"/>
+        <result property="loadx12" column="loadx12"/>
+        <result property="loady12" column="loady12"/>
+        <result property="loadz12" column="loadz12"/>
+        <result property="time" column="time"/>
+    </resultMap>
+    <select id="getLi" resultType="com.iapmhad.yhpostureadjust.entity.LhLocaload3Entity">
+        SELECT * FROM lh_locaload3 WHERE id>#{id}
+    </select>
+
+</mapper>
