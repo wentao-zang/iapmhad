@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.jydbjdj.dao.RwLocadisDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.jydbjdj.entity.RwLocadisEntity" id="rwLocadisMap">
+        <result property="id" column="id"/>
+        <result property="aircraftId" column="aircraft_id"/>
+        <result property="flightId" column="flight_id"/>
+        <result property="fixtureId" column="fixture_id"/>
+        <result property="locax1" column="locax1"/>
+        <result property="locay1" column="locay1"/>
+        <result property="locaz1" column="locaz1"/>
+        <result property="locax2" column="locax2"/>
+        <result property="locay2" column="locay2"/>
+        <result property="locaz2" column="locaz2"/>
+        <result property="locax3" column="locax3"/>
+        <result property="locay3" column="locay3"/>
+        <result property="locaz3" column="locaz3"/>
+        <result property="locax4" column="locax4"/>
+        <result property="locay4" column="locay4"/>
+        <result property="locaz4" column="locaz4"/>
+        <result property="time" column="time"/>
+    </resultMap>
+    <select id="getLi" resultType="com.iapmhad.jydbjdj.entity.RwLocadisEntity">
+        SELECT * FROM rw_locadis WHERE id>#{id}
+    </select>
+
+</mapper>

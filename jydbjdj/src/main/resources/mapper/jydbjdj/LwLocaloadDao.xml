@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.jydbjdj.dao.LwLocaloadDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.jydbjdj.entity.LwLocaloadEntity" id="lwLocaloadMap">
+        <result property="id" column="id"/>
+        <result property="aircraftId" column="aircraft_id"/>
+        <result property="flightId" column="flight_id"/>
+        <result property="fixtureId" column="fixture_id"/>
+        <result property="loadx1" column="loadx1"/>
+        <result property="loady1" column="loady1"/>
+        <result property="loadz1" column="loadz1"/>
+        <result property="loadx2" column="loadx2"/>
+        <result property="loady2" column="loady2"/>
+        <result property="loadz2" column="loadz2"/>
+        <result property="loadx3" column="loadx3"/>
+        <result property="loady3" column="loady3"/>
+        <result property="loadz3" column="loadz3"/>
+        <result property="loadx4" column="loadx4"/>
+        <result property="loady4" column="loady4"/>
+        <result property="loadz4" column="loadz4"/>
+        <result property="time" column="time"/>
+    </resultMap>
+    <select id="getLi" resultType="com.iapmhad.jydbjdj.entity.LwLocaloadEntity">
+        SELECT * FROM lw_locaload WHERE id>#{id}
+    </select>
+
+</mapper>

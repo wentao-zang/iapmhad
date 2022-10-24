@@ -63,3 +63,10 @@ spring:
             - Path=/yhpa/**
           filters:
             - RewritePath=/yhpa/(?<segment>.*),/yhpostureadjust/$\{segment}
+
+        - id: jydbjdj_route
+          uri: lb://jydbjdj
+          predicates:
+            - Path=/dbj/**
+          filters:
+            - RewritePath=/dbj/(?<segment>.*),/jydbjdj/$\{segment}
