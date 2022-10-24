@@ -1,8 +1,10 @@
 package com.iapmhad.ame_hdym.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
+import com.iapmhad.ame_hdym.entity.AxisinfoEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,6 +31,16 @@ import com.iapmhad.common.utils.R;
 public class SpinfoController {
     @Autowired
     private SpinfoService spinfoService;
+
+    @RequestMapping("/getli/{id}")
+    public List<SpinfoEntity> getLi(@PathVariable("id") Integer id){
+        List<SpinfoEntity> list = spinfoService.getLi(id);
+        if(list.size()>100) {
+            list = list.subList(list.size() - 100,list.size());
+        }
+//        list.forEach(System.out::println);
+        return list;
+    }
 
     /**
      * 列表

@@ -1,8 +1,10 @@
 package com.iapmhad.ame_hdym.service;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.iapmhad.ame_hdym.entity.AxisinfoEntity;
 import com.iapmhad.common.utils.PageUtils;
 import com.iapmhad.ame_hdym.entity.SpinfoEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -13,7 +15,7 @@ import java.util.Map;
  * @date 2022-09-15 11:02:30
  */
 public interface SpinfoService extends IService<SpinfoEntity> {
-
+    List<SpinfoEntity> getLi(int id);
     PageUtils queryPage(Map<String, Object> params);
 }
 
