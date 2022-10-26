@@ -16,6 +16,8 @@
         <result property="power" column="Power"/>
         <result property="time" column="Time"/>
     </resultMap>
-
+    <select id="getLi" resultType="com.iapmhad.ame_hdym.entity.SpinfoEntity">
+        SELECT * FROM spinfo WHERE id>#{id}
+    </select>
 
 </mapper>

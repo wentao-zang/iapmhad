@@ -1,8 +1,11 @@
 package com.iapmhad.ame_hdym.dao;
 
+import com.iapmhad.ame_hdym.entity.AxisinfoEntity;
 import com.iapmhad.ame_hdym.entity.SpinfoEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * 
@@ -13,5 +16,5 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface SpinfoDao extends BaseMapper<SpinfoEntity> {
-	
+    List<SpinfoEntity> getLi(int id);
 }
