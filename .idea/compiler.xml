@@ -6,17 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="jydbjdj" />
-        <module name="data-migration-client" />
+        <module name="process-parameters-jqrzk" />
         <module name="renren-generator" />
+        <module name="ame_hdym" />
         <module name="common" />
         <module name="yh-postureadjust" />
         <module name="hdymzkjqrxt" />
         <module name="gateway" />
-        <module name="ame_hdym" />
+        <module name="jydbjdj" />
         <module name="yh-machinedrilling" />
         <module name="member" />
-        <module name="process-parameters-jqrzk" />
+        <module name="data-migration-client" />
         <module name="data-migration-service" />
       </profile>
     </annotationProcessing>
