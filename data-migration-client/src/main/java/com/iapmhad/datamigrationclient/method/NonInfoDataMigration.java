@@ -1,7 +1,7 @@
 package com.iapmhad.datamigrationclient.method;
 
+
 import cn.hutool.http.HttpUtil;
-import com.iapmhad.datamigrationclient.entity.InfoEntity;
 import com.iapmhad.datamigrationclient.entity.NonInfoEntity;
 
 import java.sql.*;

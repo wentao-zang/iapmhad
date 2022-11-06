@@ -7,7 +7,7 @@ public class IdSearch {
     private  String ip="127.0.0.1";
     private  String port="3306";
     private  String user="root";
-    private  String password="root";
+    private  String password="abc123";
 
     private  Connection Conn(String database) {
         try {
