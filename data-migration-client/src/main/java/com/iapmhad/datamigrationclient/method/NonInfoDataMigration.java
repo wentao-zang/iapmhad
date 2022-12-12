@@ -1,10 +1,20 @@
 package com.iapmhad.datamigrationclient.method;
 
 
-import cn.hutool.http.HttpUtil;
+import com.alibaba.fastjson.JSONArray;
+import com.iapmhad.datamigrationclient.entity.HttpGetWithEntity;
 import com.iapmhad.datamigrationclient.entity.NonInfoEntity;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.entity.ContentType;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 
 import java.sql.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class NonInfoDataMigration {
     /**
@@ -14,9 +24,10 @@ public class NonInfoDataMigration {
      */
     //数据库连接配置
     private String ip = "127.0.0.1";
+    private  String sip="192.168.94.224";
     private String port = "3306";
     private String user = "root";
-    private String password = "root";
+    private String password = "abc123";
 
 
     String[] linkC;
@@ -86,9 +97,37 @@ public class NonInfoDataMigration {
     }
 
     void toService(String database,String table, String data) {
-        String url= "http://localhost:8003/data/datasavenoninfo/"+database+"/"+table+"/"+data;//指定URL
+        String url= "http://"+sip+":8003/data/datasavenoninfo/"+database+"/"+table;//指定URL
         System.out.println(data);
-        String str = HttpUtil.createGet(url).execute().body();
+        Map<String, String> map = new HashMap<>();
+        map.put("data",data);
+        String reqParams = JSONArray.toJSON(map).toString();
+        try {
+            String str = sendJsonByGetReq(url, reqParams, "UTF-8");
+            System.out.println(str);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static String sendJsonByGetReq(String url, String param, String encoding) throws Exception {
+        String body = "";
+        //创建httpclient对象
+        CloseableHttpClient client = HttpClients.createDefault();
+        HttpGetWithEntity httpGetWithEntity = new HttpGetWithEntity(url);
+        HttpEntity httpEntity = new StringEntity(param, ContentType.APPLICATION_JSON);
+        httpGetWithEntity.setEntity(httpEntity);
+        //执行请求操作，并拿到结果（同步阻塞）
+        CloseableHttpResponse response = client.execute(httpGetWithEntity);
+        //获取结果实体
+        HttpEntity entity = response.getEntity();
+        if (entity != null) {
+            //按指定编码转换结果实体为String类型
+            body = EntityUtils.toString(entity, encoding);
+        }
+        //释放链接
+        response.close();
+        return body;
     }
 
     public void close(Connection conn, Statement stmt, ResultSet rs) {

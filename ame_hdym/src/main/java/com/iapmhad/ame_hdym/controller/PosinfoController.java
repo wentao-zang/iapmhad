@@ -1,22 +1,15 @@
 package com.iapmhad.ame_hdym.controller;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-
-import com.iapmhad.ame_hdym.entity.AxisinfoEntity;
-import javafx.geometry.Pos;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.iapmhad.ame_hdym.entity.PosinfoEntity;
 import com.iapmhad.ame_hdym.service.PosinfoService;
 import com.iapmhad.common.utils.PageUtils;
 import com.iapmhad.common.utils.R;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 
 

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
 import java.util.Arrays;
-import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/data")
@@ -17,7 +17,7 @@ public class DataMigrationService {
     public String idSearch(@PathVariable("str") String str) throws SQLException {
         IdSearch idSearch=new IdSearch();
         System.out.println(str);
-        String[] links=str.split(",");
+        String[] links=str.split("&");
         Integer[] lastIds=idSearch.idsearch(links);
         String s= Arrays.toString(lastIds);
         System.out.println(s);
@@ -25,19 +25,19 @@ public class DataMigrationService {
         return s;
     }
 
-    @RequestMapping("/datasaveinfo/{database}/{data}")
-    public void dataSaveInfo(@PathVariable("database") String database,@PathVariable("data") String data) throws SQLException {
+    @RequestMapping("/datasaveinfo/{database}")
+    public void dataSaveInfo(@PathVariable("database") String database, @RequestBody Map<String,String> data) throws SQLException {
         System.out.println(data);
         DataSave dataSave=new DataSave();
-        dataSave.saveInfo(database,data);
+        dataSave.saveInfo(database,data.get("data"));
         return;
     }
 
-    @RequestMapping("/datasavenoninfo/{database}/{table}/{data}")
-    public void dataSaveNonInfo(@PathVariable("database") String database,@PathVariable("table") String table,@PathVariable("data") String data) throws SQLException {
+    @RequestMapping("/datasavenoninfo/{database}/{table}")
+    public void dataSaveNonInfo(@PathVariable("database") String database,@PathVariable("table") String table,@RequestBody Map<String,String> data) throws SQLException {
         System.out.println(data);
         DataSave dataSave=new DataSave();
-        dataSave.saveNonInfo(database,table,data);
+        dataSave.saveNonInfo(database,table,data.get("data"));
         return;
     }
 

@@ -7,12 +7,11 @@ import com.iapmhad.datamigrationclient.entity.NonInfoEntity;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Initia {
-     String[] databases1={"hdymzkjqrxt"};
-     String[] databases2={"hdym"};
+     String[] databases1={"ame_hdym"};
+     String[] databases2={"ame_hdym"};
 
      int[] lastIds;
      List<String> linkC;
@@ -21,9 +20,11 @@ public class Initia {
 
 
     private  String ip="127.0.0.1";
+    private  String sip="172.16.25.71";
     private  String port="3306";
     private  String user="root";
-    private  String password="root";
+    private  String password="abc123";
+    private  int flag = 0;
 
     private Connection Conn(String database) {
         try {
@@ -61,13 +62,14 @@ public class Initia {
         int len=linkS.size();
         StringBuffer st=new StringBuffer();
         for (int i = 0; i < len; i++) {
-            st.append(linkS.get(i) +";"+tables.get(i)+',');
+            st.append(linkS.get(i) +"&"+tables.get(i)+',');
         }
-        String url= "http://localhost:8003/data/idsearch/"+st;//指定URL
+        String url= "http://"+sip+":8003/data/idsearch/"+st;//指定URL
         String str = HttpUtil.createGet(url).execute().body();
         str=str.replaceAll("\\s*", "");
         String[] s=str.split(",");
         int[] nums=new int[s.length];
+        System.out.println(s);
         for(int i=0;i<s.length;i++){
             nums[i]=Integer.parseInt(s[i]);
         }
@@ -80,7 +82,13 @@ public class Initia {
         while (resultSet.next()) {
             String form = (String) (resultSet.getObject(1));
             //判断是否动态
-            if (form.substring(form.length() - 4).equals("info")) {
+            if (form.equals("axisinfo")||form.equals("holediameas")||form.equals("holeschedule")||form.equals("loginfo")||
+                    form.equals("posinfo")||form.equals("spinfo")||form.equals("statusinfo")||form.equals("tryoutinfo")){
+                flag = 1;
+            }else {
+                flag = 0;
+            }
+            if (flag == 1) {
                 tables.add(form);
                 linkC.add(database1);
                 linkS.add(database2);
@@ -96,7 +104,14 @@ public class Initia {
         while (resultSet.next()) {
             String form = (String) (resultSet.getObject(1));
             //判断是否动态
-            if (!form.substring(form.length() - 4).equals("info")) {
+            if (form.equals("axisinfo")||form.equals("holesmeas")||form.equals("holeschedule")||form.equals("loginfo")||
+                    form.equals("posinfo")||form.equals("spinfo")||form.equals("statusinfo")||form.equals("trycutholes")
+                    ||form.equals("footpressinfo")||form.equals("hole_normalmodify")||form.equals("holemodify_refhole")){
+                flag = 1;
+            }else {
+                flag = 0;
+            }
+            if (flag == 0) {
                 tables.add(form);
                 linkC.add(database1);
                 linkS.add(database2);
