@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iapmhad.yh_postureadjust.dao.AxisinfoleDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.iapmhad.yh_postureadjust.entity.AxisinfoleEntity" id="axisinfoleMap">
+        <result property="id" column="ID"/>
+        <result property="xvel" column="XVEL"/>
+        <result property="yvel" column="YVEL"/>
+        <result property="zvel" column="ZVEL"/>
+        <result property="avel" column="AVEL"/>
+        <result property="bvel" column="BVEL"/>
+        <result property="gvel" column="GVEL"/>
+        <result property="xdis" column="XDIS"/>
+        <result property="ydis" column="YDIS"/>
+        <result property="zdis" column="ZDIS"/>
+        <result property="adis" column="ADIS"/>
+        <result property="bdis" column="BDIS"/>
+        <result property="gdis" column="GDIS"/>
+        <result property="xtemp" column="XTEMP"/>
+        <result property="ytemp" column="YTEMP"/>
+        <result property="ztemp" column="ZTEMP"/>
+        <result property="atemp" column="ATEMP"/>
+        <result property="btemp" column="BTEMP"/>
+        <result property="gtemp" column="GTEMP"/>
+        <result property="xpower" column="XPOWER"/>
+        <result property="ypower" column="YPOWER"/>
+        <result property="zpower" column="ZPOWER"/>
+        <result property="apower" column="APOWER"/>
+        <result property="bpower" column="BPOWER"/>
+        <result property="gpower" column="GPOWER"/>
+        <result property="xcurrent" column="XCURRENT"/>
+        <result property="ycurrent" column="YCURRENT"/>
+        <result property="zcurrent" column="ZCURRENT"/>
+        <result property="acurrent" column="ACURRENT"/>
+        <result property="bcurrent" column="BCURRENT"/>
+        <result property="gcurrent" column="GCURRENT"/>
+        <result property="time" column="TIME"/>
+    </resultMap>
+    <select id="getLi" resultType="com.iapmhad.yhpostureadjust.entity.AxisinfoleEntity">
+        SELECT * FROM axisinfole WHERE id>#{id}
+    </select>
+
+</mapper>
